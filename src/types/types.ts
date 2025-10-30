@@ -1,0 +1,6 @@
+export type { SkillGroups } from './skills.type'
+export type { ExperienceItem } from './experience.type'
+export type { EducationItem } from './education.type'
+export type { LanguageItem } from './language.type'
+export type { Contacts } from './contacts.type'
+export type { ResumeData } from './resume.type'
