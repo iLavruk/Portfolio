@@ -21,7 +21,11 @@
       "@/*": ["src/*"],
       "@types": ["src/types/types.ts"],
       "@constants": ["src/lib/constants/constants.ts"],
-      "@components/*": ["src/components/*"],
+      "@components/*": [
+        "src/components/*",
+        "src/components/*/index.ts",
+        "src/components/*/index.tsx"
+      ],
       "@lib/*": ["src/lib/*"],
       "@data/*": ["src/data/*"]
     },
@@ -33,6 +37,8 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
+    ,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"]
 }
