@@ -9,13 +9,15 @@ const data = resume as unknown as ResumeData
 export default function App() {
   return (
     <>
-      <Header />
+      <Header email={data.contacts.email} linkedin={data.contacts.linkedin} />
       <Hero
         name={data.name}
         title={data.title}
         location={data.contacts.location}
-        available={true}
-        summary="Building modern web applications with focus on user experience and performance. Specialized in React ecosystem and passionate about turning complex challenges into elegant solutions."
+        available={data.available}
+        summary={data.summary}
+        contacts={data.contacts}
+        cvUrl={data.cvUrl}
       />
 
       <Footer name={data.name} />

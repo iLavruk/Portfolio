@@ -5,7 +5,8 @@
     "email": "ivanlavruk9@gmail.com",
     "phone": "+49 1578 3060764",
     "location": "Berlin, Germany",
-    "linkedin": "https://www.linkedin.com/in/ivan-lavruk/"
+    "linkedin": "https://www.linkedin.com/in/ivan-lavruk/",
+    "github": "https://github.com/iLavruk"
   },
   "skills": {
     "frontend": [
@@ -84,5 +85,8 @@
     "Sport",
     "Photography",
     "Chess"
-  ]
+  ],
+  "summary": "Building modern web applications with focus on user experience and performance. Specialized in the React ecosystem and passionate about turning complex challenges into elegant solutions.",
+  "available": true,
+  "cvUrl": "/cv/CV_Ivan_Lavruk_en.pdf"
 }

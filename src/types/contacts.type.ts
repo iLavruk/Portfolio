@@ -3,5 +3,5 @@ export type Contacts = {
   phone: string
   location: string
   linkedin: string
+  github?: string
 }
-
