@@ -3,6 +3,10 @@ import type { ResumeData } from '@types'
 import Header from '@components/header/Header'
 import Hero from '@components/hero/Hero'
 import Experience from '@components/experience/Experience'
+import Skills from '@components/skills/Skills'
+import Education from '@components/education/Education'
+import About from '@components/about/About'
+import Interests from '@components/interests/Interests'
 import Footer from '@components/footer/Footer'
 
 const data = resume as unknown as ResumeData
@@ -21,7 +25,16 @@ export default function App() {
         cvUrl={data.cvUrl}
       />
 
+      <About summary={data.summary} />
+      
       <Experience items={data.experience} />
+
+      <Skills groups={data.skills} />
+
+      <Education items={data.education} />
+
+
+      <Interests items={data.interests} />
 
       <Footer name={data.name} />
     </>
