@@ -1,4 +1,5 @@
 import type { HeroProps } from '@types'
+import avatarSrc from '@/assets/images/avatar.webp'
 
 export default function Hero({ name, title, location, summary, available }: HeroProps) {
   return (
@@ -8,6 +9,9 @@ export default function Hero({ name, title, location, summary, available }: Hero
       <p>{title}</p>
       {location && <div>{location}</div>}
       {summary && <p>{summary}</p>}
+      <figure>
+        <img src={avatarSrc} alt={name} loading="lazy" />
+      </figure>
       <div>
         <button type="button">Contact Me</button>
         <button type="button">Download CV</button>
