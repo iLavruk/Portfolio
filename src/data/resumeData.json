@@ -17,7 +17,8 @@
       "HTML5",
       "CSS3",
       "SCSS",
-      "Bootstrap"
+      "Bootstrap",
+      "WordPress"
     ],
     "testing": [
       "Cypress (Automation)"
@@ -59,6 +60,17 @@
         "Wrote automated tests with Cypress.",
         "Collaborated cross-functionally to enhance product features."
       ]
+    },
+    {
+      "role": "HTML/CSS Developer | UI/UX Designer",
+      "company": "d.istra",
+      "location": "Ivano-Frankivsk, Ukraine",
+      "period": "Aug 2018 – Aug 2022",
+      "bullets": [
+        "Built responsive web interfaces using HTML5, CSS3, SCSS, Bootstrap, WordPress.",
+        "Designed marketing materials, banners, and logos, ensuring brand consistency.",
+        "Improved UI/UX for accessibility and engagement."
+      ]
     }
   ],
   "education": [
@@ -74,9 +86,18 @@
     }
   ],
   "languages": [
-    { "name": "Ukrainian", "level": "Native" },
-    { "name": "English", "level": "B2" },
-    { "name": "German", "level": "B1" }
+    {
+      "name": "Ukrainian",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "B2"
+    },
+    {
+      "name": "German",
+      "level": "B1"
+    }
   ],
   "interests": [
     "Travel",

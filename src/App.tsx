@@ -2,6 +2,7 @@ import resume from '@data/resumeData.json'
 import type { ResumeData } from '@types'
 import Header from '@components/header/Header'
 import Hero from '@components/hero/Hero'
+import Experience from '@components/experience/Experience'
 import Footer from '@components/footer/Footer'
 
 const data = resume as unknown as ResumeData
@@ -19,6 +20,8 @@ export default function App() {
         contacts={data.contacts}
         cvUrl={data.cvUrl}
       />
+
+      <Experience items={data.experience} />
 
       <Footer name={data.name} />
     </>

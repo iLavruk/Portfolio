@@ -2,7 +2,7 @@ import type { NavItem } from '@types'
 import { SectionId } from './sections.constant'
 
 export const NAV_ITEMS: NavItem[] = [
-  { id: SectionId.scroll, label: 'Scroll' },
+  { id: SectionId.scroll, label: 'Home' },
   { id: SectionId.about, label: 'About Me' },
   { id: SectionId.workExperience, label: 'Work Experience' },
   { id: SectionId.skills, label: 'Skills' },
