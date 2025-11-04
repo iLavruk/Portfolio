@@ -1,9 +1,10 @@
 import type { HeroProps } from '@types'
 import avatarSrc from '@/assets/images/avatar.webp'
+import { SectionId } from '@lib/constants/sections.constant'
 
 export default function Hero({ name, title, location, summary, available, contacts, cvUrl }: HeroProps) {
   return (
-    <section id="scroll">
+    <section id={SectionId.home}>
       {available && <div>Available for work</div>}
       <h1>{name}</h1>
       <p>{title}</p>

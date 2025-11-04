@@ -7,6 +7,8 @@ import Skills from '@components/skills/Skills'
 import Education from '@components/education/Education'
 import About from '@components/about/About'
 import Interests from '@components/interests/Interests'
+import Languages from '@components/languages/Languages'
+import Contact from '@components/contact/Contact'
 import Footer from '@components/footer/Footer'
 
 const data = resume as unknown as ResumeData
@@ -33,8 +35,11 @@ export default function App() {
 
       <Education items={data.education} />
 
+      <Languages items={data.languages} />
 
       <Interests items={data.interests} />
+
+      <Contact contacts={data.contacts} cvUrl={data.cvUrl} />
 
       <Footer name={data.name} />
     </>
