@@ -1,0 +1,7 @@
+/* BEM: experience */
+.experience {}
+.experience__card { padding: var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface); }
+.experience__card + .experience__card { margin-top: var(--space-4); }
+.experience__meta { color: var(--color-muted); }
+.experience__list { list-style: disc; padding-left: var(--indent-list); }
+.experience__list li { margin: var(--space-1) 0; }

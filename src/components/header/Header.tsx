@@ -1,15 +1,13 @@
 import Nav from '@components/nav/Nav'
-import Contacts from './Contacts'
-import type { HeaderProps } from '@types'
+import styles from './header.module.css'
 
-export default function Header({ email, linkedin }: HeaderProps) {
+export default function Header() {
   return (
-    <header>
-      <div>
-        <a href="#">Ivan.</a>
+    <header className={styles.header}>
+      <div className={`container ${styles.header__inner}`}>
+        <a className={styles.header__brand} href="#home" aria-label="Home">Ivan.</a>
+        <Nav />
       </div>
-      <Nav />
-      <Contacts email={email} linkedin={linkedin} />
     </header>
   )
 }

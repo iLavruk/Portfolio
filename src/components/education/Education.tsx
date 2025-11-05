@@ -1,5 +1,6 @@
 import type { EducationItem } from '@types'
 import { SectionId } from '@lib/constants/sections.constant'
+import styles from './education.module.css'
 
 type EducationProps = {
   items: EducationItem[]
@@ -7,9 +8,9 @@ type EducationProps = {
 
 export default function Education({ items }: EducationProps) {
   return (
-    <section id={SectionId.education}>
+    <section id={SectionId.education} className={styles.education}>
       <h2>Education</h2>
-      <ul>
+      <ul className={styles.education__list}>
         {items.map((e) => (
           <li key={`${e.title}-${e.period}`}>
             <strong>{e.title}</strong> — {e.place} ({e.period})
@@ -19,4 +20,3 @@ export default function Education({ items }: EducationProps) {
     </section>
   )
 }
-

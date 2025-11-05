@@ -1,0 +1,11 @@
+/* BEM: languages */
+.languages {}
+
+.languages__list {
+    list-style: disc;
+    padding-left: var(--indent-list);
+}
+
+.languages__list li {
+    margin: var(--space-1) 0;
+}

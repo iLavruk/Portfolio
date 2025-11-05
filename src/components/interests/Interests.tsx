@@ -1,4 +1,5 @@
 import { SectionId } from '@lib/constants/sections.constant'
+import styles from './interests.module.css'
 
 type InterestsProps = {
   items: string[]
@@ -7,9 +8,9 @@ type InterestsProps = {
 export default function Interests({ items }: InterestsProps) {
   if (!items?.length) return null
   return (
-    <section id={SectionId.interests}>
+    <section id={SectionId.interests} className={styles.interests}>
       <h2>Interests</h2>
-      <ul>
+      <ul className={styles.interests__list}>
         {items.map((i) => (
           <li key={i}>{i}</li>
         ))}
@@ -17,4 +18,3 @@ export default function Interests({ items }: InterestsProps) {
     </section>
   )
 }
-

@@ -16,7 +16,7 @@ const data = resume as unknown as ResumeData
 export default function App() {
   return (
     <>
-      <Header email={data.contacts.email} linkedin={data.contacts.linkedin} />
+      <Header />
       <Hero
         name={data.name}
         title={data.title}

@@ -1,0 +1,4 @@
+/* BEM: interests */
+.interests {}
+.interests__list { list-style: disc; padding-left: var(--indent-list); }
+.interests__list li {  }

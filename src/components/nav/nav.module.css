@@ -1,0 +1,17 @@
+/* BEM: nav */
+.nav {}
+
+.nav__list {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.nav__link {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.nav__link--active {
+  color: var(--color-primary);
+}
+

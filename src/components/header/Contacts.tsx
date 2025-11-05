@@ -1,18 +1,8 @@
-export default function Contacts({ email, linkedin }: { email?: string; linkedin?: string }) {
-  if (!email && !linkedin) return null
+export default function Contacts({ email }: { email?: string }) {
+  if (!email) return null
   return (
-    <div>
-      {email && <a href={`mailto:${email}`}>{email}</a>}
-      {linkedin && (
-        <>
-          {' '}
-          |{' '}
-          <a href={linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-        </>
-      )}
+    <div className="header-contacts">
+      <a className="contact-link" href={`mailto:${email}`}>{email}</a>
     </div>
   )
 }
-

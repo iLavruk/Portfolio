@@ -1,0 +1,11 @@
+/* BEM: education */
+.education {}
+
+.education__list {
+    list-style: disc;
+    padding-left: var(--indent-list);
+}
+
+.education__list li {
+    margin: var(--space-1) 0;
+}
