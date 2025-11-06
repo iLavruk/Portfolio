@@ -21,6 +21,7 @@ export default function App() {
         <Hero
           name={data.name}
           title={data.title}
+          tagline={data.tagline}
           location={data.contacts.location}
           available={data.available}
           summary={data.summary}

@@ -9,7 +9,8 @@ export type ResumeData = {
   education: EducationItem[]
   languages: LanguageItem[]
   interests: string[]
-  summary?: string
-  available?: boolean
-  cvUrl?: string
+  summary: string
+  tagline: string
+  available: boolean
+  cvUrl: string
 }

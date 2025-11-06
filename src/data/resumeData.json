@@ -1,113 +1,114 @@
 {
-  "name": "Ivan Lavruk",
-  "title": "Frontend Developer • React • TypeScript • UI/UX",
-  "contacts": {
-    "email": "ivanlavruk9@gmail.com",
-    "phone": "+49 1578 3060764",
-    "location": "Berlin, Germany",
-    "linkedin": "https://www.linkedin.com/in/ivan-lavruk/",
-    "github": "https://github.com/iLavruk"
-  },
-  "skills": {
-    "Frontend": [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Redux Toolkit",
-      "HTML5",
-      "CSS3",
-      "SCSS",
-      "Bootstrap",
-      "WordPress"
-    ],
-    "Testing": [
-      "Cypress (Automation)"
-    ],
-    "Design": [
-      "UI/UX",
-      "Figma",
-      "Adobe Photoshop",
-      "Illustrator"
-    ],
-    "Other": [
-      "Responsive Design",
-      "Cross-browser",
-      "Git",
-      "GitHub Actions",
-      "Video Editing"
-    ]
-  },
-  "experience": [
-    {
-      "role": "Frontend Developer (Team-based Training Program)",
-      "company": "Binary Studio Academy",
-      "location": "Berlin, Germany",
-      "period": "Jun 2025 – Aug 2025",
-      "bullets": [
-        "Built core features for the Meetlytic project.",
-        "Implemented UI components with React, TypeScript, Redux Toolkit, CSS.",
-        "Contributed to auth flow, meeting management, and dashboard UI.",
-        "Gained experience with GitHub Actions, CI/CD, and code reviews."
-      ]
-    },
-    {
-      "role": "Web Developer | QA Automation",
-      "company": "Plutio",
-      "location": "Ivano-Frankivsk, Ukraine",
-      "period": "Aug 2022 – May 2023",
-      "bullets": [
-        "Developed and maintained web applications, optimizing performance and UX.",
-        "Wrote automated tests with Cypress.",
-        "Collaborated cross-functionally to enhance product features."
-      ]
-    },
-    {
-      "role": "HTML/CSS Developer | UI/UX Designer",
-      "company": "d.istra",
-      "location": "Ivano-Frankivsk, Ukraine",
-      "period": "Aug 2018 – Aug 2022",
-      "bullets": [
-        "Built responsive web interfaces using HTML5, CSS3, SCSS, Bootstrap, WordPress.",
-        "Designed marketing materials, banners, and logos, ensuring brand consistency.",
-        "Improved UI/UX for accessibility and engagement."
-      ]
-    }
-  ],
-  "education": [
-    {
-      "title": "SoftServe IT Academy – React Online Marathon",
-      "place": "Ivano-Frankivsk, Ukraine",
-      "period": "Feb 2022 – May 2022"
-    },
-    {
-      "title": "Master's Degree in Software Engineering – IFNTUOG",
-      "place": "Ivano-Frankivsk, Ukraine",
-      "period": "2013 – 2019"
-    }
-  ],
-  "languages": [
-    {
-      "name": "Ukrainian",
-      "level": "Native"
-    },
-    {
-      "name": "English",
-      "level": "B2"
-    },
-    {
-      "name": "German",
-      "level": "B1"
-    }
-  ],
-  "interests": [
-    "Travel",
-    "Music",
-    "Coding",
-    "Sport",
-    "Photography",
-    "Chess"
-  ],
-  "summary": "Building modern web applications with focus on user experience and performance. Specialized in the React ecosystem and passionate about turning complex challenges into elegant solutions.",
-  "available": true,
-  "cvUrl": "/cv/CV_Ivan_Lavruk_en.pdf"
+    "name":  "Ivan Lavruk",
+    "tagline":  "Building fast, beautiful, and meaningful web applications with React.",
+    "title":  "Frontend Developer • React • TypeScript • UI/UX",
+    "contacts":  {
+                     "email":  "ivanlavruk9@gmail.com",
+                     "phone":  "+49 1578 3060764",
+                     "location":  "Berlin, Germany",
+                     "linkedin":  "https://www.linkedin.com/in/ivan-lavruk/",
+                     "github":  "https://github.com/iLavruk"
+                 },
+    "skills":  {
+                   "Frontend":  [
+                                    "JavaScript",
+                                    "TypeScript",
+                                    "React",
+                                    "Redux Toolkit",
+                                    "HTML5",
+                                    "CSS3",
+                                    "SCSS",
+                                    "Bootstrap",
+                                    "WordPress"
+                                ],
+                   "Testing":  [
+                                   "Cypress (Automation)"
+                               ],
+                   "Design":  [
+                                  "UI/UX",
+                                  "Figma",
+                                  "Adobe Photoshop",
+                                  "Illustrator"
+                              ],
+                   "Other":  [
+                                 "Responsive Design",
+                                 "Cross-browser",
+                                 "Git",
+                                 "GitHub Actions",
+                                 "Video Editing"
+                             ]
+               },
+    "experience":  [
+                       {
+                           "role":  "Frontend Developer (Team-based Training Program)",
+                           "company":  "Binary Studio Academy",
+                           "location":  "Berlin, Germany",
+                           "period":  "Jun 2025 – Aug 2025",
+                           "bullets":  [
+                                           "Built core features for the Meetlytic project.",
+                                           "Implemented UI components with React, TypeScript, Redux Toolkit, CSS.",
+                                           "Contributed to auth flow, meeting management, and dashboard UI.",
+                                           "Gained experience with GitHub Actions, CI/CD, and code reviews."
+                                       ]
+                       },
+                       {
+                           "role":  "Web Developer | QA Automation",
+                           "company":  "Plutio",
+                           "location":  "Ivano-Frankivsk, Ukraine",
+                           "period":  "Aug 2022 – May 2023",
+                           "bullets":  [
+                                           "Developed and maintained web applications, optimizing performance and UX.",
+                                           "Wrote automated tests with Cypress.",
+                                           "Collaborated cross-functionally to enhance product features."
+                                       ]
+                       },
+                       {
+                           "role":  "HTML/CSS Developer | UI/UX Designer",
+                           "company":  "d.istra",
+                           "location":  "Ivano-Frankivsk, Ukraine",
+                           "period":  "Aug 2018 – Aug 2022",
+                           "bullets":  [
+                                           "Built responsive web interfaces using HTML5, CSS3, SCSS, Bootstrap, WordPress.",
+                                           "Designed marketing materials, banners, and logos, ensuring brand consistency.",
+                                           "Improved UI/UX for accessibility and engagement."
+                                       ]
+                       }
+                   ],
+    "education":  [
+                      {
+                          "title":  "SoftServe IT Academy – React Online Marathon",
+                          "place":  "Ivano-Frankivsk, Ukraine",
+                          "period":  "Feb 2022 – May 2022"
+                      },
+                      {
+                          "title":  "Master\u0027s Degree in Software Engineering – IFNTUOG",
+                          "place":  "Ivano-Frankivsk, Ukraine",
+                          "period":  "2013 – 2019"
+                      }
+                  ],
+    "languages":  [
+                      {
+                          "name":  "Ukrainian",
+                          "level":  "Native"
+                      },
+                      {
+                          "name":  "English",
+                          "level":  "B2"
+                      },
+                      {
+                          "name":  "German",
+                          "level":  "B1"
+                      }
+                  ],
+    "interests":  [
+                      "Travel",
+                      "Music",
+                      "Coding",
+                      "Sport",
+                      "Photography",
+                      "Chess"
+                  ],
+    "summary":  "I\u0027m Ivan Lavruk, a Frontend Developer passionate about creating modern, intuitive, and high-performance web applications.\nI specialize in the React ecosystem and enjoy transforming complex ideas into clean and engaging user experiences.\nBeyond coding, I\u0027m inspired by design, technology, and continuous learning - always seeking new ways to grow and innovate.",
+    "available":  true,
+    "cvUrl":  "/cv/CV_Ivan_Lavruk_en.pdf"
 }
