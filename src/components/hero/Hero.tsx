@@ -25,12 +25,11 @@ export default function Hero({ name, title, tagline, location, summary, availabl
           <p className={styles.hero__subtitle}>{title}</p>
           <p className={styles.hero__tagline}>{tagline}</p>
           <div className={styles.hero__location}>
-              {contactIcons.location ? (
-                <contactIcons.location className={styles.hero__icon} aria-hidden="true" />
-              ) : null}
-              {location}
-            </div>
-          <p className={styles.hero__summary}>{summary}</p>
+            {contactIcons.location ? (
+              <contactIcons.location className={styles.hero__icon} aria-hidden="true" />
+            ) : null}
+            {location}
+          </div>
           <div className={styles.hero__actions}>
             <a className={styles.hero__btn} href={`mailto:${contacts.email}`}>
               {contactIcons.email ? <contactIcons.email className={styles.hero__icon} aria-hidden="true" /> : null}
