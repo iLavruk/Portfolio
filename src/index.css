@@ -45,7 +45,9 @@ p {
     color: var(--color-text);
 }
 
-ul, li, ol {
+ul,
+li,
+ol {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -66,8 +68,13 @@ section {
 }
 
 /* component styles moved to CSS Modules */
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
+
 
 @media (max-width: 860px) {
-  .hero__inner { grid-template-columns: 1fr; }
+    .hero__inner {
+        grid-template-columns: 1fr;
+    }
 }

@@ -10,14 +10,16 @@ export default function Languages({ items }: LanguagesProps) {
   if (!items?.length) return null
   return (
     <section id={SectionId.languages} className={styles.languages}>
-      <h2>Languages</h2>
-      <ul className={styles.languages__list}>
-        {items.map((l) => (
-          <li key={l.name}>
-            {l.name}: {l.level}
-          </li>
-        ))}
-      </ul>
+      <div className="container">
+        <h2>Languages</h2>
+        <ul className={styles.languages__list}>
+          {items.map((l) => (
+            <li key={l.name}>
+              {l.name}: {l.level}
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   )
 }

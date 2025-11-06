@@ -1,0 +1,64 @@
+/* BEM: contact-form */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.form__field {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.form__field--full {
+  grid-column: 1 / -1;
+}
+
+.form label {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-base);
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary);
+}
+
+.form input.is-error,
+.form textarea.is-error {
+  border-color: var(--color-error); 
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.form__note {
+  color: var(--color-muted);
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 768px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}

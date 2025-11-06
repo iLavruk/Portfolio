@@ -1,5 +1,6 @@
 import { SectionId } from '@lib/constants/sections.constant'
 import styles from './interests.module.css'
+import { interestIcons } from '@/lib/icons/lucide-map'
 
 type InterestsProps = {
   items: string[]
@@ -9,12 +10,20 @@ export default function Interests({ items }: InterestsProps) {
   if (!items?.length) return null
   return (
     <section id={SectionId.interests} className={styles.interests}>
-      <h2>Interests</h2>
-      <ul className={styles.interests__list}>
-        {items.map((i) => (
-          <li key={i}>{i}</li>
-        ))}
-      </ul>
+      <div className="container">
+        <h2>Interests</h2>
+        <ul className={styles.interests__list}>
+          {items.map((i) => {
+            const Icon = interestIcons[i]
+            return (
+              <li key={i}>
+                {Icon ? <Icon className={styles.interests__icon} aria-hidden="true" /> : null}
+                {i}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     </section>
   )
 }

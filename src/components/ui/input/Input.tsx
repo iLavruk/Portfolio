@@ -1,4 +1,5 @@
 import type { InputHTMLAttributes } from 'react'
+import styles from './input.module.css'
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string
@@ -6,18 +7,17 @@ export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   helperText?: string
 }
 
-export default function Input({ label, error, helperText, id, name, ...rest }: InputProps) {
+export default function Input({ label, error, helperText, id, name, className, ...rest }: InputProps) {
   const inputId = id || name
   return (
-    <div>
+    <div className={`${styles.field} ${className ?? ''}`.trim()}>
       {label ? (
-        <label htmlFor={inputId}>
+        <label className={styles.field__label} htmlFor={inputId}>
           {label}
         </label>
       ) : null}
-      <input id={inputId} name={name} {...rest} />
-      {error ? <div role="alert">{error}</div> : helperText ? <div>{helperText}</div> : null}
+      <input className={styles.field__control} id={inputId} name={name} {...rest} />
+      {error ? <div className={styles.field__error} role="alert">{error}</div> : helperText ? <div className={styles.field__helper}>{helperText}</div> : null}
     </div>
   )
 }
-

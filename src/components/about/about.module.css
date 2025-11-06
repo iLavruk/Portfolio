@@ -1,0 +1,16 @@
+/* BEM: about */
+.about {}
+
+.about__wrap {
+    padding-block: var(--space-12);
+}
+
+.about__title {
+    margin: 0 0 var(--space-4);
+    font-size: var(--fs-2xl);
+}
+
+.about__text {
+    max-width: 72ch;
+    color: var(--color-muted);
+}

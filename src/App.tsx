@@ -17,31 +17,33 @@ export default function App() {
   return (
     <>
       <Header />
-      <Hero
-        name={data.name}
-        title={data.title}
-        location={data.contacts.location}
-        available={data.available}
-        summary={data.summary}
-        contacts={data.contacts}
-        cvUrl={data.cvUrl}
-      />
+      <main id="main">
+        <Hero
+          name={data.name}
+          title={data.title}
+          location={data.contacts.location}
+          available={data.available}
+          summary={data.summary}
+          contacts={data.contacts}
+          cvUrl={data.cvUrl}
+        />
 
-      <About summary={data.summary} />
-      
-      <Experience items={data.experience} />
+        <About summary={data.summary} />
+        
+        <Experience items={data.experience} />
 
-      <Skills groups={data.skills} />
+        <Skills groups={data.skills} />
 
-      <Education items={data.education} />
+        <Education items={data.education} />
 
-      <Languages items={data.languages} />
+        <Languages items={data.languages} />
 
-      <Interests items={data.interests} />
+        <Interests items={data.interests} />
 
-      <Contact contacts={data.contacts} cvUrl={data.cvUrl} />
-
+        <Contact contacts={data.contacts} />
+      </main>
       <Footer name={data.name} />
     </>
   )
 }
+

@@ -1,49 +1,66 @@
 import type { Contacts } from '@types'
 import ContactForm from './ContactForm'
+import ContactCard from './ContactCard'
 import { SectionId } from '@lib/constants/sections.constant'
 import styles from './contact.module.css'
+import { contactIcons } from '@/lib/icons/lucide-map'
 
 type ContactProps = {
   contacts: Contacts
-  cvUrl?: string
 }
 
-export default function Contact({ contacts, cvUrl }: ContactProps) {
+export default function Contact({ contacts }: ContactProps) {
   const tel = contacts.phone.replace(/[^\d+]/g, '')
   return (
     <section id={SectionId.contact} className={styles.contact}>
-      <h2>Get in Touch</h2>
-      <ul className={styles.contact__list}>
-        <li className={styles.contact__item}>
-          <span className={styles.contact__label}>Email:</span> <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
-        </li>
-        <li className={styles.contact__item}>
-          <span className={styles.contact__label}>Phone:</span> <a href={`tel:${tel}`}>{contacts.phone}</a>
-        </li>
-        <li className={styles.contact__item}>
-          <span className={styles.contact__label}>Location:</span> {contacts.location}
-        </li>
-        <li className={styles.contact__item}>
-          <span className={styles.contact__label}>LinkedIn:</span>{' '}
-          <a href={contacts.linkedin} target="_blank" rel="noreferrer">{contacts.linkedin}</a>
-        </li>
-        {contacts.github ? (
-          <li className={styles.contact__item}>
-            <span className={styles.contact__label}>GitHub:</span>{' '}
-            <a href={contacts.github} target="_blank" rel="noreferrer">{contacts.github}</a>
-          </li>
-        ) : null}
-        {cvUrl ? (
-          <li className={styles.contact__item}>
-            <a href={cvUrl} download target="_blank" rel="noreferrer noopener">
-              Download CV
-            </a>
-          </li>
-        ) : null}
-      </ul>
-
-      <h3>Send a Message</h3>
-      <ContactForm />
+      <div className="container">
+        <div className={styles.contact__head}>
+          <h2 className={styles.contact__title}>Get in Touch</h2>
+          <p className={styles.contact__subtitle}>Open to new opportunities and interesting projects</p>
+        </div>
+      </div>
+      <div className={`container ${styles.contact__wrap}`}>
+        <div>
+          <ul className={styles.contact__list}>
+            <ContactCard
+              icon={contactIcons.email}
+              label="Email"
+              value={contacts.email}
+              href={`mailto:${contacts.email}`}
+            />
+            <ContactCard
+              icon={contactIcons.phone}
+              label="Phone"
+              value={contacts.phone}
+              href={`tel:${tel}`}
+            />
+            <ContactCard
+              icon={contactIcons.linkedin}
+              label="LinkedIn"
+              value={contacts.linkedin}
+              href={contacts.linkedin}
+              external
+            />
+              <ContactCard
+                icon={contactIcons.github}
+                label="GitHub"
+                value={contacts.github}
+                href={contacts.github}
+                external
+              />
+            <ContactCard
+              icon={contactIcons.location}
+              label="Location"
+              value={contacts.location}
+            />
+          </ul>
+        </div>
+        <div>
+          <div className={styles.contact__formCard}>
+            <ContactForm />
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

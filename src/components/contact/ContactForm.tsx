@@ -2,14 +2,41 @@ import Form from '@components/ui/form/Form'
 import Input from '@components/ui/input/Input'
 import Textarea from '@components/ui/textarea/Textarea'
 import Button from '@components/ui/button/Button'
+import styles from './contact-form.module.css'
+import { formFields } from '@constants'
 
 export default function ContactForm() {
   return (
-    <Form onSubmit={(e) => e.preventDefault()} aria-describedby="contact-note">
-      <Input label="Name" name="name" type="text" placeholder="Your name" />
-      <Input label="Email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />
-      <Textarea label="Message" name="message" rows={5} placeholder="Write your message..." />
-      <Button type="button" aria-describedby="contact-note" disabled>Send</Button>
+    <Form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+      {formFields.map(field => {
+        const fieldClass = `${styles.form__field} ${field.fullWidth ? styles['form__field--full'] : ''}`.trim()
+        if ('isTextarea' in field && field.isTextarea) {
+          return (
+            <Textarea
+              key={field.name}
+              className={fieldClass}
+              label={field.label}
+              name={field.name}
+              placeholder={field.placeholder}
+              rows={field.rows ?? 5}
+            />
+          )
+        }
+        return (
+          <Input
+            key={field.name}
+            className={fieldClass}
+            type={field.type}
+            label={field.label}
+            name={field.name}
+            placeholder={field.placeholder}
+            autoComplete={field.autoComplete}
+          />
+        )
+      })}
+      <div className={styles.form__actions}>
+        <Button type="submit" disabled>Send</Button>
+      </div>
     </Form>
   )
 }

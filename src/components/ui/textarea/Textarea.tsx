@@ -1,4 +1,5 @@
 import type { TextareaHTMLAttributes } from 'react'
+import styles from './textarea.module.css'
 
 export type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
   label?: string
@@ -6,18 +7,17 @@ export type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
   helperText?: string
 }
 
-export default function Textarea({ label, error, helperText, id, name, ...rest }: TextareaProps) {
+export default function Textarea({ label, error, helperText, id, name, className, ...rest }: TextareaProps) {
   const textareaId = id || name
   return (
-    <div>
+    <div className={`${styles.field} ${className ?? ''}`.trim()}>
       {label ? (
-        <label htmlFor={textareaId}>
+        <label className={styles.field__label} htmlFor={textareaId}>
           {label}
         </label>
       ) : null}
-      <textarea id={textareaId} name={name} {...rest} />
-      {error ? <div role="alert">{error}</div> : helperText ? <div>{helperText}</div> : null}
+      <textarea className={styles.field__control} id={textareaId} name={name} {...rest} />
+      {error ? <div className={styles.field__error} role="alert">{error}</div> : helperText ? <div className={styles.field__helper}>{helperText}</div> : null}
     </div>
   )
 }
-

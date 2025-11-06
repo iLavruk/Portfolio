@@ -1,9 +1,20 @@
 /* BEM: hero */
 .hero {
+  position: relative;
   border-bottom: 1px solid var(--color-border);
   min-height: calc(100vh - var(--header-h));
   display: flex;
   align-items: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 70%;
+  background: radial-gradient(50% 50% at 20% 20%, color-mix(in oklab, var(--color-primary) 14%, transparent) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .hero__inner {
@@ -16,16 +27,20 @@
 .hero__content {}
 
 .hero__badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
   border: 1px solid var(--color-border);
   padding: var(--space-1) var(--space-2);
   border-radius: 999px;
   color: var(--color-primary);
   margin-bottom: var(--space-3);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
 }
 
 .hero__title {
-  font-size: var(--fs-5xl);
+  font-size: clamp(var(--fs-3xl), 2vw + 1rem, var(--fs-5xl));
   margin: 0;
 }
 
@@ -35,14 +50,31 @@
   color: var(--color-primary);
 }
 
+.hero__divider {
+  width: 280px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  margin: var(--space-3) 0 var(--space-4);
+}
+
 .hero__subtitle {
   color: var(--color-muted);
   margin-bottom: var(--space-4);
+  font-size: var(--fs-xl);
 }
 
 .hero__location {
-  color: var(--color-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-2);
   margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-sm);
 }
 
 .hero__summary {
@@ -55,8 +87,15 @@
   margin-bottom: var(--space-4);
 }
 
+.hero__icon {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+
 .hero__btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-sm);
   background: var(--color-primary);
@@ -75,6 +114,12 @@
   color: var(--color-muted);
 }
 
+.hero__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
 .hero__media img {
   width: 100%;
   border-radius: var(--radius);
@@ -84,4 +129,11 @@
   .hero__inner {
     grid-template-columns: 1fr;
   }
+}
+
+.hero__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
 }

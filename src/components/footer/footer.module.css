@@ -1,0 +1,12 @@
+/* BEM: footer */
+.footer {
+    border-top: 1px solid var(--color-border);
+    padding-block: var(--space-6);
+    color: var(--color-muted);
+}
+
+.footer__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
