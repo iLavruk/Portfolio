@@ -10,6 +10,7 @@ import {
   Clapperboard,
   Code2,
   Download,
+  Calendar,
   Dumbbell,
   FileCode,
   GitBranch,
@@ -81,7 +82,7 @@ export const interestIcons: Record<string, LucideIcon> = {
   'Chess': Book,
 }
 
-export const miscIcons = { Download, ChevronRight }
+export const miscIcons = { Download, ChevronRight, Calendar }
 
 export const navIcons: Record<string, LucideIcon> = {
   about: User,
