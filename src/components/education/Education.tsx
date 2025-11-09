@@ -12,12 +12,12 @@ export default function Education({ items }: EducationProps) {
   return (
     <section id={SectionId.education} className={styles.education}>
       <div className="container">
-        <h2 className={styles.education__title}>Education</h2>
+        <h2 className="section-title">Education</h2>
       </div>
       <div className={`container ${styles.education__wrap}`}>
         <ul className={styles.education__grid}>
           {items.map(({ title, place, period }) => (
-            <li className={styles.education__card} key={`${title}-${period}`}>
+            <li className={`${styles.education__card} card`} key={`${title}-${period}`}>
               <div className={styles.education__body}>
                 <h3 className={styles.education__degree}>{title}</h3>
                 <div className={styles.education__place}>{place}</div>
@@ -33,4 +33,3 @@ export default function Education({ items }: EducationProps) {
     </section>
   )
 }
-

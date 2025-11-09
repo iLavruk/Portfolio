@@ -1,25 +1,9 @@
 /* BEM: experience */
-.experience {}
 
-.experience__title {
-    text-align: center;
-    font-size: var(--fs-4xl);
-    margin: 0 0 calc(var(--space-8) + var(--space-2));
-    position: relative;
-}
-
-.experience__title::after {
-    content: '';
-    display: block;
-    width: 120px;
-    height: 4px;
-    background: var(--color-primary);
-    border-radius: 2px;
-    margin: var(--space-2) auto 0;
-}
+/* title is shared via .section-title */
 
 .experience__wrap {
-    padding-block: var(--space-12);
+    padding: 0;
 }
 
 .experience__items {
@@ -35,16 +19,9 @@
     column-gap: var(--space-6);
     row-gap: var(--space-3);
     align-items: end;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    background: var(--color-surface);
-    box-shadow: var(--shadow-sm);
 }
 
-.experience__card:hover {
-    box-shadow: var(--shadow-md);
-    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
-}
+/* hover, border, bg handled by global .card */
 
 .experience__body {
     display: grid;
@@ -194,3 +171,5 @@
         margin-bottom: var(--space-1);
     }
 }
+
+/* removed empty media block */

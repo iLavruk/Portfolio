@@ -10,11 +10,13 @@ type ExperienceProps = {
 export default function Experience({ items }: ExperienceProps) {
   return (
     <section id={SectionId.workExperience} className={styles.experience}>
+      <div className="container">
+        <h2 className="section-title">Work Experience</h2>
+      </div>
       <div className={`container ${styles.experience__wrap}`}>
-        <h2 className={styles.experience__title}>Work Experience</h2>
         <div className={styles.experience__items}>
           {items.map(({ role, tag, company, period, bullets, location }) => (
-              <article className={styles.experience__card} key={`${company}-${period}`}>
+              <article className={`${styles.experience__card} card`} key={`${company}-${period}`}>
                 <div className={styles.experience__body}>
                   <header className={styles.experience__header}>
                     <div className={styles.experience__titleRow}>

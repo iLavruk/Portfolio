@@ -11,7 +11,7 @@ export default function About({ summary }: AboutProps) {
     <section id={SectionId.about} className={styles.about}>
       <div className="container">
         <div className={styles.about__head}>
-          <h2 className={styles.about__title}>About Me</h2>
+          <h2 className="section-title">About Me</h2>
         </div>
       </div>
       <div className={`container ${styles.about__wrap}`}>

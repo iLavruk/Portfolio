@@ -67,14 +67,62 @@ section {
     scroll-margin-top: var(--header-h);
 }
 
+/* Desktop: add more vertical space between sections */
+@media (min-width: 1025px) {
+    section {
+        padding: calc(var(--space-12) + var(--space-6)) 0;
+    }
+}
+
+/* Vertical spacing between sections */
+section + section {
+    margin-top: var(--space-8);
+}
+
+@media (min-width: 1025px) {
+    section + section {
+        margin-top: var(--space-12);
+    }
+}
+
+/* Shared section title */
+.section-title {
+    text-align: center;
+    font-size: var(--fs-4xl);
+    margin: 0 0 calc(var(--space-8) + var(--space-2));
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: var(--color-primary);
+    border-radius: 2px;
+    margin: var(--space-2) auto 0;
+}
+/* Mobile: tighten space under section titles for consistency */
+@media (max-width: 600px) {
+    .section-title {
+        margin-bottom: var(--space-6);
+    }
+}
+
+/* Reusable card surface */
+.card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+}
+
 /* component styles moved to CSS Modules */
 html {
     scroll-behavior: smooth;
-}
-
-
-@media (max-width: 860px) {
-    .hero__inner {
-        grid-template-columns: 1fr;
-    }
 }

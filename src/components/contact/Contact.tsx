@@ -15,7 +15,7 @@ export default function Contact({ contacts }: ContactProps) {
     <section id={SectionId.contact} className={styles.contact}>
       <div className="container">
         <div className={styles.contact__head}>
-          <h2 className={styles.contact__title}>Get in Touch</h2>
+          <h2 className="section-title">Get in Touch</h2>
           <p className={styles.contact__subtitle}>Open to new opportunities and interesting projects</p>
         </div>
       </div>
@@ -56,7 +56,7 @@ export default function Contact({ contacts }: ContactProps) {
           </ul>
         </div>
         <div>
-          <div className={styles.contact__formCard}>
+          <div className={`${styles.contact__formCard} card`}>
             <ContactForm />
           </div>
         </div>

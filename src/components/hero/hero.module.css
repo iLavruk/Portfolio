@@ -24,7 +24,6 @@
   gap: var(--space-8);
 }
 
-.hero__content {}
 
 .hero__badge {
   display: inline-flex;
@@ -44,7 +43,6 @@
   margin: 0;
 }
 
-.hero__first {}
 
 .hero__last {
   color: var(--color-primary);

@@ -1,25 +1,10 @@
 /* BEM: skills */
-.skills {}
 
 .skills__wrap {
-  padding-block: var(--space-12);
+  padding: 0;
 }
 
-.skills__title {
-  text-align: center;
-  font-size: var(--fs-4xl);
-  margin: 0 0 var(--space-8);
-}
-
-.skills__title::after {
-  content: '';
-  display: block;
-  width: 120px;
-  height: 4px;
-  background: var(--color-primary);
-  border-radius: 2px;
-  margin: var(--space-2) auto 0;
-}
+/* title is shared via .section-title */
 
 .skills__grid {
   display: grid;

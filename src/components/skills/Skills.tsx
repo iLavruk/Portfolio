@@ -15,8 +15,10 @@ export default function Skills({ groups }: SkillsProps) {
 
   return (
     <section id={SectionId.skills} className={styles.skills}>
+      <div className="container">
+        <h2 className="section-title">Skills</h2>
+      </div>
       <div className={`container ${styles.skills__wrap}`}>
-        <h2 className={styles.skills__title}>Skills</h2>
         <div className={styles.skills__grid}>
           {featuredEntry ? (
             <div className={`${styles.skills__panel} ${styles['skills__panel--featured']}`} key={featuredTitle}>

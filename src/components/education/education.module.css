@@ -1,25 +1,10 @@
 /* BEM: education */
-.education {}
 
 .education__wrap {
-    padding-block: var(--space-12);
+    padding: 0;
 }
 
-.education__title {
-    text-align: center;
-    font-size: var(--fs-4xl);
-    margin: 0 0 calc(var(--space-8) + var(--space-2));
-}
-
-.education__title::after {
-    content: '';
-    display: block;
-    width: 120px;
-    height: 4px;
-    background: var(--color-primary);
-    border-radius: 2px;
-    margin: var(--space-2) auto 0;
-}
+/* title is shared via .section-title */
 
 .education__grid {
     display: grid;
@@ -36,16 +21,6 @@
     align-items: end;
     gap: var(--space-3) var(--space-6);
     padding: var(--space-5);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    background: var(--color-surface);
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
-}
-
-.education__card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-1px);
 }
 
 .education__body {
@@ -93,7 +68,6 @@
     }
 
     .education__title {
-        font-size: var(--fs-3xl);
         margin-bottom: var(--space-5);
     }
 
@@ -128,3 +102,5 @@
         padding: 0 var(--space-2);
     }
 }
+
+/* removed empty media block */

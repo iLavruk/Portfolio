@@ -1,5 +1,4 @@
 /* BEM: contact */
-.contact {}
 
 .contact__head {
   text-align: center;
@@ -8,7 +7,7 @@
 }
 
 .contact__wrap {
-  padding-block: var(--space-12);
+  padding: 0;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: var(--space-8);
@@ -26,10 +25,6 @@
   gap: var(--space-3);
   align-items: center;
   padding: var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  background: var(--color-bg);
-  box-shadow: var(--shadow-sm);
 }
 
 .contact__avatar {
@@ -63,28 +58,9 @@
 
 .contact__formCard {
   padding: var(--space-6);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  background: var(--color-bg);
-  box-shadow: var(--shadow-md);
 }
 
-.contact__title {
-  text-align: center;
-  font-size: var(--fs-5xl);
-  margin: 0;
-  position: relative;
-}
-
-.contact__title::after {
-  content: '';
-  display: block;
-  width: 120px;
-  height: 4px;
-  background: var(--color-primary);
-  border-radius: 2px;
-  margin: var(--space-2) auto 0;
-}
+/* title is shared via .section-title */
 
 .contact__subtitle {
   margin-top: var(--space-3);
@@ -97,3 +73,5 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* removed empty media block */

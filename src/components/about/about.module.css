@@ -1,29 +1,14 @@
 /* BEM: about */
-.about {}
 
 .about__head {
   text-align: center;
   margin: 0 auto var(--space-8);
 }
 
-.about__title {
-  font-size: var(--fs-4xl);
-  margin: 0;
-  position: relative;
-}
-
-.about__title::after {
-  content: '';
-  display: block;
-  width: 120px;
-  height: 4px;
-  background: var(--color-primary);
-  border-radius: 2px;
-  margin: var(--space-2) auto 0;
-}
+/* title is shared via .section-title */
 
 .about__wrap {
-  padding-block: var(--space-8);
+  padding: 0;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: var(--space-6);

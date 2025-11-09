@@ -11,7 +11,7 @@ export default function Interests({ items }: InterestsProps) {
   return (
     <section id={SectionId.interests} className={styles.interests}>
       <div className="container">
-        <h2>Interests</h2>
+        <h2 className="section-title">Interests</h2>
         <ul className={styles.interests__list}>
           {items.map((i) => {
             const Icon = interestIcons[i]

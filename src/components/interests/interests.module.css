@@ -1,5 +1,6 @@
 /* BEM: interests */
-.interests {}
+
+/* title is shared via .section-title */
 
 .interests__list {
     padding-left: var(--indent-list);
@@ -16,3 +17,5 @@
     width: var(--icon-sm);
     height: var(--icon-sm);
 }
+
+/* removed empty media blocks */
