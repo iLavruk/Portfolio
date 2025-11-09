@@ -1,7 +1,2 @@
-export type SkillGroups = {
-  frontend: string[]
-  testing: string[]
-  design: string[]
-  other: string[]
-}
-
+// Flexible skills grouping keyed by display label (e.g., "Frontend", "Main Stack").
+export type SkillGroups = Record<string, string[]>

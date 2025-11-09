@@ -9,7 +9,6 @@
   text-align: center;
   font-size: var(--fs-4xl);
   margin: 0 0 var(--space-8);
-  position: relative;
 }
 
 .skills__title::after {
@@ -34,11 +33,24 @@
   border-radius: var(--radius);
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
+  /* Додано transition у базовий стан для плавного ефекту наведення та відведення */
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .skills__panel:hover {
   box-shadow: var(--shadow-md);
-  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  transform: translateY(-1px);
+}
+
+.skills__panel--featured {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-6) var(--space-6);
+}
+
+.skills__panel--featured .skills__groupTitle {
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--space-6);
 }
 
 .skills__groupTitle {
@@ -64,6 +76,11 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   background: var(--color-surface);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.skills__chip:hover {
+  border-color: var(--color-primary);
 }
 
 .skills__icon {
@@ -71,8 +88,49 @@
   height: var(--icon-sm);
 }
 
+/* Center chips and add subtle hover for the featured panel */
+.skills__panel--featured .skills__chips {
+  justify-content: center;
+  gap: var(--space-6);
+}
+
+/* Featured chips: vertical layout with bigger icons and centered labels */
+.skills__chip--featured {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 148px;
+  padding: var(--space-5) var(--space-6);
+  text-align: center;
+}
+
+.skills__chip--featured .skills__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.skills__chipLabel {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
 @media (max-width: 1024px) {
   .skills__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills__panel--featured .skills__chips {
+    gap: var(--space-4);
+  }
+
+  .skills__panel--featured .skills__chip--featured {
+    min-width: 0;
+    flex: 0 0 100%;
+    width: 100%;
+    padding: var(--space-4) var(--space-4);
   }
 }

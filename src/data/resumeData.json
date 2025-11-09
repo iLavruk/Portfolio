@@ -10,6 +10,11 @@
     "github": "https://github.com/iLavruk"
   },
   "skills": {
+    "Main Stack": [
+      "React",
+      "TypeScript",
+      "JavaScript"
+    ],
     "Frontend": [
       "JavaScript",
       "TypeScript",
@@ -21,14 +26,14 @@
       "Bootstrap",
       "WordPress"
     ],
-    "Testing": [
-      "Cypress (Automation)"
-    ],
     "Design": [
       "UI/UX",
       "Figma",
       "Adobe Photoshop",
       "Illustrator"
+    ],
+    "Testing": [
+      "Cypress (Automation)"
     ],
     "Other": [
       "Responsive Design",
