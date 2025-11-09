@@ -60,21 +60,7 @@
     /* avoid baseline gaps for vertical centering */
 }
 
-/* Reusable pill badge */
-.pill {
-    font-size: var(--fs-sm);
-    color: var(--color-muted);
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    padding: 0 var(--space-2);
-    height: 28px;
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-1);
-    line-height: 1;
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-sm);
-}
+/* badge styles are global in index.css */
 
 .experience__tag {
     font-size: var(--fs-sm);
@@ -131,7 +117,7 @@
 }
 
 /* Ensure icon size tracks text size inside small pills */
-.pill .experience__icon {
+.badge .experience__icon {
     width: 1em;
     height: 1em;
 }
@@ -173,3 +159,5 @@
 }
 
 /* removed empty media block */
+
+

@@ -122,6 +122,22 @@ section + section {
     transform: translateY(-1px);
 }
 
+/* Reusable badge */
+.badge {
+    font-size: var(--fs-sm);
+    color: var(--color-muted);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 0 var(--space-2);
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    line-height: 1;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
 /* component styles moved to CSS Modules */
 html {
     scroll-behavior: smooth;

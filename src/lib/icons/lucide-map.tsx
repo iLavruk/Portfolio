@@ -32,6 +32,8 @@ import {
   GraduationCap,
   Heart,
   MapPin,
+  Map,
+  Crown,
 } from 'lucide-react'
 import { LinkedInIcon, GitHubIcon } from './brand-icons'
 
@@ -74,12 +76,12 @@ export const skillIcons: Record<string, LucideIcon> = {
 }
 
 export const interestIcons: Record<string, LucideIcon> = {
-  'Travel': Globe,
+  'Travel': Map,
   'Music': Music,
   'Coding': Code2,
   'Sport': Dumbbell,
   'Photography': Camera,
-  'Chess': Book,
+  'Chess': Crown,
 }
 
 export const miscIcons = { Download, ChevronRight, Calendar }

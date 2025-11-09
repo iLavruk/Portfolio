@@ -2,20 +2,126 @@
 
 /* title is shared via .section-title */
 
-.interests__list {
-    padding-left: var(--indent-list);
+.interests__wrap {
+    padding: 0;
 }
 
-.interests__list li {
-    margin: var(--space-1) 0;
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
+.interests__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.interests__card {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    width: 100%;
+}
+
+.interests__avatar {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .interests__icon {
-    width: var(--icon-sm);
-    height: var(--icon-sm);
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-primary);
 }
 
-/* removed empty media blocks */
+.interests__name {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+}
+
+@media (max-width: 600px) {
+    .interests__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-3);
+    }
+
+    .interests__card {
+        padding: var(--space-3);
+    }
+
+    .interests__avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .interests__icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .interests__name {
+        font-size: var(--fs-base);
+    }
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) and (min-width: 601px) {
+    .interests__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1025px) {
+    .interests__avatar {
+        width: 56px;
+        height: 56px;
+    }
+    .interests__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+.interests__card:hover .interests__avatar {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    border-color: color-mix(in oklab, var(--color-border) 60%, var(--color-primary));
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    .interests__grid {
+        gap: var(--space-2);
+    }
+    .interests__card {
+        padding: var(--space-2) var(--space-3);
+    }
+    .interests__avatar {
+        width: 36px;
+        height: 36px;
+    }
+    .interests__icon {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+    .interests__name {
+        font-size: var(--fs-sm);
+    }
+}
+
+/* Desktop: slightly larger icons */
+@media (min-width: 1025px) {
+    .interests__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

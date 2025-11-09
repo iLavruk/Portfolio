@@ -44,17 +44,7 @@
 .education__period {
     justify-self: end;
     align-self: end;
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-1);
-    font-size: var(--fs-sm);
-    color: var(--color-muted);
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    height: 28px;
-    padding: 0 var(--space-2);
-    box-shadow: var(--shadow-sm);
+    /* badge visuals are handled by global .badge */
 }
 
 .education__icon {

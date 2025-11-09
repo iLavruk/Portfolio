@@ -22,7 +22,7 @@ export default function Languages({ items }: LanguagesProps) {
               <li className={`${styles.languages__card} card`} key={l.name}>
                 <Globe className={styles.languages__icon} aria-hidden="true" />
                 <h3 className={styles.languages__name}>{l.name}</h3>
-                <span className={`${styles.languages__badge} ${native ? styles['languages__badge--native'] : ''}`}>
+                <span className={`badge ${styles.languages__badge} ${native ? styles['languages__badge--native'] : ''}`}>
                   {l.level}
                 </span>
               </li>

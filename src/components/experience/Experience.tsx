@@ -25,7 +25,7 @@ export default function Experience({ items }: ExperienceProps) {
                     </div>
                     <div className={styles.experience__meta}>{company}</div>
                   </header>
-                  <div className={`${styles.pill} ${styles.experience__period}`}>
+                  <div className={`badge ${styles.experience__period}`}>
                     <miscIcons.Calendar className={styles.experience__icon} aria-hidden="true" />
                     {period}
                   </div>
@@ -38,7 +38,7 @@ export default function Experience({ items }: ExperienceProps) {
                     ))}
                   </ul>
                 </div>
-                <div className={`${styles.pill} ${styles.experience__badge}`}>
+                <div className={`badge ${styles.experience__badge}`}>
                   <contactIcons.location className={styles.experience__icon} aria-hidden="true" />
                   {location}
                 </div>

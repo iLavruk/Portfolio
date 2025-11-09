@@ -22,7 +22,7 @@ export default function Education({ items }: EducationProps) {
                 <h3 className={styles.education__degree}>{title}</h3>
                 <div className={styles.education__place}>{place}</div>
               </div>
-              <div className={styles.education__period}>
+              <div className={`badge ${styles.education__period}`}>
                 <miscIcons.Calendar className={styles.education__icon} aria-hidden="true" />
                 {period}
               </div>

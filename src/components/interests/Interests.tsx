@@ -12,13 +12,17 @@ export default function Interests({ items }: InterestsProps) {
     <section id={SectionId.interests} className={styles.interests}>
       <div className="container">
         <h2 className="section-title">Interests</h2>
-        <ul className={styles.interests__list}>
+      </div>
+      <div className={`container ${styles.interests__wrap}`}>
+        <ul className={styles.interests__grid}>
           {items.map((i) => {
             const Icon = interestIcons[i]
             return (
-              <li key={i}>
-                {Icon ? <Icon className={styles.interests__icon} aria-hidden="true" /> : null}
-                {i}
+              <li className={`${styles.interests__card} card`} key={i}>
+                <div className={styles.interests__avatar}>
+                  {Icon ? <Icon className={styles.interests__icon} aria-hidden="true" /> : null}
+                </div>
+                <span className={styles.interests__name}>{i}</span>
               </li>
             )
           })}
