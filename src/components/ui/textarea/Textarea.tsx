@@ -17,7 +17,7 @@ export default function Textarea({ label, error, helperText, id, name, className
           {label}
         </label>
       ) : null}
-      <textarea className={styles.field__control} id={textareaId} name={name} aria-invalid={!!error || undefined} aria-describedby={describedBy} {...rest} />
+      <textarea className={`${styles.field__control} ${error ? 'is-error' : ''}`.trim()} id={textareaId} name={name} aria-invalid={!!error || undefined} aria-describedby={describedBy} {...rest} />
       {error ? <div id={`${textareaId}-error`} className={styles.field__error} role="alert">{error}</div> : helperText ? <div id={`${textareaId}-helper`} className={styles.field__helper}>{helperText}</div> : null}
     </div>
   )

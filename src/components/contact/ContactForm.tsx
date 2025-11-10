@@ -6,13 +6,16 @@ import styles from './contact-form.module.css'
 import { formFields } from '@constants'
 import { useState } from 'react'
 
+import { validateContactForm, type FieldName } from '@/lib/validation/contact-form.validation'
+
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-  const [message, setMessage] = useState<string>('')
+  const [toast, setToast] = useState<string>('')
+  const [errors, setErrors] = useState<Partial<Record<FieldName, string>>>({})
 
-  const formId = import.meta.env.VITE_FORMSPREE_ID
+  const formId = import.meta.env.VITE_FORMSPREE_ID as string | undefined
   const endpoint = formId ? `https://formspree.io/f/${formId}` : undefined
-  
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const form = e.currentTarget
@@ -21,14 +24,25 @@ export default function ContactForm() {
     // Honeypot
     if (fd.get('website')) {
       setStatus('success')
-      setMessage('Thanks!')
+      setToast('Thanks!')
       form.reset()
       return
     }
 
+    // Client-side validation
+    const v = validateContactForm(fd)
+    if (Object.keys(v).length) {
+      setErrors(v)
+      const first = Object.keys(v)[0] as FieldName
+      const el = form.querySelector(`[name="${first}"]`) as HTMLElement | null
+      el?.focus()
+      return
+    }
+    setErrors({})
+
     if (!endpoint) {
       setStatus('error')
-      setMessage('Form is not configured. Please set VITE_FORMSPREE_ID.')
+      setToast('Form is not configured. Please set VITE_FORMSPREE_ID.')
       return
     }
 
@@ -41,11 +55,11 @@ export default function ContactForm() {
       })
       if (!res.ok) throw new Error('Request failed')
       setStatus('success')
-      setMessage('Thanks! I\'ll get back to you soon.')
+      setToast('Thanks! I\'ll get back to you soon.')
       form.reset()
     } catch {
       setStatus('error')
-      setMessage('Something went wrong. Please try again later.')
+      setToast('Something went wrong. Please try again later.')
     }
   }
 
@@ -59,6 +73,7 @@ export default function ContactForm() {
       {formFields.map(field => {
         const nameMod = (styles as Record<string, string>)[`form__field--${field.name}`]
         const fieldClass = `${styles.form__field} ${field.fullWidth ? styles['form__field--full'] : ''} ${nameMod ?? ''}`.trim()
+        const err = errors[field.name as FieldName]
         if ('isTextarea' in field && field.isTextarea) {
           return (
             <Textarea
@@ -68,7 +83,8 @@ export default function ContactForm() {
               name={field.name}
               placeholder={field.placeholder}
               rows={field.rows ?? 5}
-              aria-invalid={status === 'error' && !!message ? true : undefined}
+              required
+              error={err}
             />
           )
         }
@@ -81,20 +97,21 @@ export default function ContactForm() {
             name={field.name}
             placeholder={field.placeholder}
             autoComplete={field.autoComplete}
-            aria-invalid={status === 'error' && !!message ? true : undefined}
+            required
+            error={err}
           />
         )
       })}
       <div className={styles.form__actions}>
         <Button type="submit" disabled={status === 'loading' || !endpoint}>
-          {status === 'loading' ? 'Sending…' : 'Send'}
+          {status === 'loading' ? 'Sending...' : 'Send'}
         </Button>
         {!endpoint ? (
           <span className={styles.form__note}>Form not configured yet.</span>
         ) : status === 'success' ? (
-          <span className="badge" role="status" aria-live="polite">{message}</span>
+          <span className="badge" role="status" aria-live="polite">{toast}</span>
         ) : status === 'error' ? (
-          <span className={styles.form__note} role="alert" aria-live="assertive">{message}</span>
+          <span className={styles.form__note} role="alert" aria-live="assertive">{toast}</span>
         ) : null}
       </div>
     </Form>

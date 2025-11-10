@@ -17,7 +17,7 @@ export default function Input({ label, error, helperText, id, name, className, .
           {label}
         </label>
       ) : null}
-      <input className={styles.field__control} id={inputId} name={name} aria-invalid={!!error || undefined} aria-describedby={describedBy} {...rest} />
+      <input className={`${styles.field__control} ${error ? 'is-error' : ''}`.trim()} id={inputId} name={name} aria-invalid={!!error || undefined} aria-describedby={describedBy} {...rest} />
       {error ? <div id={`${inputId}-error`} className={styles.field__error} role="alert">{error}</div> : helperText ? <div id={`${inputId}-helper`} className={styles.field__helper}>{helperText}</div> : null}
     </div>
   )
