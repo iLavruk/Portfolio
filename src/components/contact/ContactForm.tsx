@@ -7,12 +7,12 @@ import { formFields } from '@constants'
 import { useState } from 'react'
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState<string>('')
 
-  const formId = import.meta.env.VITE_FORMSPREE_ID as string | undefined
+  const formId = import.meta.env.VITE_FORMSPREE_ID
   const endpoint = formId ? `https://formspree.io/f/${formId}` : undefined
-
+  
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const form = e.currentTarget
