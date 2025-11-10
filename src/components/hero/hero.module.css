@@ -41,10 +41,13 @@
 }
 
 @keyframes hero-dot-blink {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.9;
   }
+
   50% {
     transform: scale(1.35);
     opacity: 0.4;
@@ -130,6 +133,9 @@
 
 .hero__links {
   color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .hero__link {
@@ -182,4 +188,3 @@
   border-radius: var(--radius);
   object-fit: cover;
 }
-
