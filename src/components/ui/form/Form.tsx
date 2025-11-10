@@ -1,8 +1,6 @@
 import type { FormHTMLAttributes, PropsWithChildren } from 'react'
 
-export type FormProps = PropsWithChildren<
-  FormHTMLAttributes<HTMLFormElement>
->
+export type FormProps = PropsWithChildren<FormHTMLAttributes<HTMLFormElement>>
 
 export default function Form({ children, noValidate = true, ...rest }: FormProps) {
   return (
@@ -11,4 +9,3 @@ export default function Form({ children, noValidate = true, ...rest }: FormProps
     </form>
   )
 }
-

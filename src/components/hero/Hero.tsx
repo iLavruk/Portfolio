@@ -20,9 +20,8 @@ export default function Hero({ name, title, tagline, available, contacts, cvUrl 
             const last = rest.join(' ')
             return (
               <h1 className={styles.hero__title}>
-                <span className={styles.hero__first}>{first}</span> {last && (
-                  <span className={styles.hero__last}>{last}</span>
-                )}
+                <span className={styles.hero__first}>{first}</span>{' '}
+                {last && <span className={styles.hero__last}>{last}</span>}
               </h1>
             )
           })()}
@@ -31,33 +30,60 @@ export default function Hero({ name, title, tagline, available, contacts, cvUrl 
           <p className={styles.hero__tagline}>{tagline}</p>
           <div className={styles.hero__actions}>
             <a className={styles.hero__btn} href={`mailto:${contacts.email}`}>
-              {contactIcons.email ? <contactIcons.email className={styles.hero__icon} aria-hidden="true" /> : null}
+              {contactIcons.email ? (
+                <contactIcons.email className={styles.hero__icon} aria-hidden="true" />
+              ) : null}
               Contact Me
             </a>
-            <a className={`${styles.hero__btn} ${styles['hero__btn--ghost']}`} href={cvUrl} download target="_blank" rel="noreferrer noopener">
-              {miscIcons.Download ? <miscIcons.Download className={styles.hero__icon} aria-hidden="true" /> : null}
+            <a
+              className={`${styles.hero__btn} ${styles['hero__btn--ghost']}`}
+              href={cvUrl}
+              download
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {miscIcons.Download ? (
+                <miscIcons.Download className={styles.hero__icon} aria-hidden="true" />
+              ) : null}
               Download CV
             </a>
           </div>
           <div className={styles.hero__links}>
-            <a className={styles.hero__link} href={contacts.linkedin} target="_blank" rel="noreferrer">
-              {contactIcons.linkedin ? <contactIcons.linkedin className={styles.hero__icon} aria-hidden="true" /> : null}
+            <a
+              className={styles.hero__link}
+              href={contacts.linkedin}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {contactIcons.linkedin ? (
+                <contactIcons.linkedin className={styles.hero__icon} aria-hidden="true" />
+              ) : null}
               LinkedIn
             </a>
             {contacts.github && (
               <>
                 {' '}
                 |{' '}
-                <a className={styles.hero__link} href={contacts.github} target="_blank" rel="noreferrer">
-                  {contactIcons.github ? <contactIcons.github className={styles.hero__icon} aria-hidden="true" /> : null}
+                <a
+                  className={styles.hero__link}
+                  href={contacts.github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {contactIcons.github ? (
+                    <contactIcons.github className={styles.hero__icon} aria-hidden="true" />
+                  ) : null}
                   GitHub
                 </a>
               </>
             )}
             <>
               {' '}
-              | <a className={styles.hero__link} href={`mailto:${contacts.email}`}>
-                {contactIcons.email ? <contactIcons.email className={styles.hero__icon} aria-hidden="true" /> : null}
+              |{' '}
+              <a className={styles.hero__link} href={`mailto:${contacts.email}`}>
+                {contactIcons.email ? (
+                  <contactIcons.email className={styles.hero__icon} aria-hidden="true" />
+                ) : null}
                 Email
               </a>
             </>

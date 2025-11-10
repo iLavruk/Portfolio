@@ -24,7 +24,6 @@ export default function Nav() {
     }
   }, [])
 
-
   useEffect(() => {
     const mq = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`)
     const body = document.body
@@ -47,7 +46,6 @@ export default function Nav() {
     }
   }, [open])
 
-
   return (
     <nav aria-label="Primary" className={styles.nav}>
       <button
@@ -57,9 +55,16 @@ export default function Nav() {
         aria-controls="primary-nav"
         onClick={() => setOpen((v) => !v)}
       >
-        {open ? <X width={20} height={20} aria-hidden="true" /> : <Menu width={20} height={20} aria-hidden="true" />}
+        {open ? (
+          <X width={20} height={20} aria-hidden="true" />
+        ) : (
+          <Menu width={20} height={20} aria-hidden="true" />
+        )}
       </button>
-      <ul id="primary-nav" className={`${styles.nav__list} ${open ? styles['nav__list--open'] : ''}`}>
+      <ul
+        id="primary-nav"
+        className={`${styles.nav__list} ${open ? styles['nav__list--open'] : ''}`}
+      >
         {NAV_ITEMS.map((item) => (
           <li key={item.id}>
             <a

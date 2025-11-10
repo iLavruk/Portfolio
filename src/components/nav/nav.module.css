@@ -11,7 +11,9 @@
   gap: var(--space-1);
   padding-bottom: 2px;
   background: linear-gradient(var(--color-primary), var(--color-primary)) 0 100% / 0 2px no-repeat;
-  transition: background-size 300ms ease, color 300ms ease;
+  transition:
+    background-size 300ms ease,
+    color 300ms ease;
 }
 
 .nav__link--active {

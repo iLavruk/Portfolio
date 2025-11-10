@@ -9,4 +9,4 @@ export const SectionId = {
   contact: 'contact',
 } as const
 
-export type SectionId = typeof SectionId[keyof typeof SectionId]
+export type SectionId = (typeof SectionId)[keyof typeof SectionId]

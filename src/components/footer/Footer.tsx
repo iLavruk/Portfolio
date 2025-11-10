@@ -6,9 +6,10 @@ export default function Footer({ name }: FooterProps) {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footer__wrap}`}>
-        <div>&copy; {year} {name}</div>
+        <div>
+          &copy; {year} {name}
+        </div>
       </div>
     </footer>
   )
 }
-

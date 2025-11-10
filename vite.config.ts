@@ -4,7 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Portfolio/',         
+  base: '/Portfolio/',
   plugins: [
     react({
       babel: {

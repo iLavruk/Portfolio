@@ -32,7 +32,7 @@ export default function App() {
         />
 
         <About summary={data.summary} />
-        
+
         <Experience items={data.experience} />
 
         <Skills groups={data.skills} />
@@ -49,4 +49,3 @@ export default function App() {
     </>
   )
 }
-

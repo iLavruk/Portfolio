@@ -7,7 +7,15 @@ export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   helperText?: string
 }
 
-export default function Input({ label, error, helperText, id, name, className, ...rest }: InputProps) {
+export default function Input({
+  label,
+  error,
+  helperText,
+  id,
+  name,
+  className,
+  ...rest
+}: InputProps) {
   const inputId = id || name
   const describedBy = error ? `${inputId}-error` : helperText ? `${inputId}-helper` : undefined
   return (
@@ -17,8 +25,23 @@ export default function Input({ label, error, helperText, id, name, className, .
           {label}
         </label>
       ) : null}
-      <input className={`${styles.field__control} ${error ? 'is-error' : ''}`.trim()} id={inputId} name={name} aria-invalid={!!error || undefined} aria-describedby={describedBy} {...rest} />
-      {error ? <div id={`${inputId}-error`} className={styles.field__error} role="alert">{error}</div> : helperText ? <div id={`${inputId}-helper`} className={styles.field__helper}>{helperText}</div> : null}
+      <input
+        className={`${styles.field__control} ${error ? 'is-error' : ''}`.trim()}
+        id={inputId}
+        name={name}
+        aria-invalid={!!error || undefined}
+        aria-describedby={describedBy}
+        {...rest}
+      />
+      {error ? (
+        <div id={`${inputId}-error`} className={styles.field__error} role="alert">
+          {error}
+        </div>
+      ) : helperText ? (
+        <div id={`${inputId}-helper`} className={styles.field__helper}>
+          {helperText}
+        </div>
+      ) : null}
     </div>
   )
 }

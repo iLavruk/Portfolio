@@ -16,7 +16,9 @@ export default function Contact({ contacts }: ContactProps) {
       <div className="container">
         <div className={styles.contact__head}>
           <h2 className="section-title">Get in Touch</h2>
-          <p className={styles.contact__subtitle}>Open to new opportunities and interesting projects</p>
+          <p className={styles.contact__subtitle}>
+            Open to new opportunities and interesting projects
+          </p>
         </div>
       </div>
       <div className={`container ${styles.contact__wrap}`}>
@@ -41,18 +43,14 @@ export default function Contact({ contacts }: ContactProps) {
               href={contacts.linkedin}
               external
             />
-              <ContactCard
-                icon={contactIcons.github}
-                label="GitHub"
-                value={contacts.github}
-                href={contacts.github}
-                external
-              />
             <ContactCard
-              icon={contactIcons.location}
-              label="Location"
-              value={contacts.location}
+              icon={contactIcons.github}
+              label="GitHub"
+              value={contacts.github}
+              href={contacts.github}
+              external
             />
+            <ContactCard icon={contactIcons.location} label="Location" value={contacts.location} />
           </ul>
         </div>
         <div>

@@ -3,12 +3,14 @@ import { useEffect, useRef, useState } from 'react'
 export function useActiveSection(ids: string[]) {
   const [active, setActive] = useState<string | null>(null)
   const activeRef = useRef<string | null>(null)
-  useEffect(() => { activeRef.current = active }, [active])
+  useEffect(() => {
+    activeRef.current = active
+  }, [active])
 
   useEffect(() => {
     const elements = ids
       .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => el !== null) 
+      .filter((el): el is HTMLElement => el !== null)
 
     if (!elements.length) return
 
@@ -33,7 +35,7 @@ export function useActiveSection(ids: string[]) {
       },
       {
         root: null,
-        rootMargin: '0px 0px -70% 0px', 
+        rootMargin: '0px 0px -70% 0px',
         threshold: 0.1,
       },
     )

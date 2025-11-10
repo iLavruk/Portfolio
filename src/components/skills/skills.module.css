@@ -1,6 +1,4 @@
-﻿
-
-.skills__wrap {
+﻿.skills__wrap {
   padding: 0;
 }
 
@@ -13,9 +11,6 @@
 .skills__panel {
   padding: var(--space-4);
 }
-
-
-
 
 .skills__panel--featured {
   grid-column: 1 / -1;
@@ -51,7 +46,10 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   background: var(--color-surface);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .skills__chip:hover {
@@ -114,5 +112,3 @@
     font-size: var(--fs-base);
   }
 }
-
-

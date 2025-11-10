@@ -5,7 +5,9 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.header__inner}`}>
-        <a className={styles.header__brand} href="#home" aria-label="Home">Ivan.</a>
+        <a className={styles.header__brand} href="#home" aria-label="Home">
+          Ivan.
+        </a>
         <Nav />
       </div>
     </header>

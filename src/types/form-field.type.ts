@@ -17,4 +17,3 @@ export type TextareaField = FormFieldBase & {
 }
 
 export type FormField = TextInputField | TextareaField
-

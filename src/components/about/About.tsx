@@ -17,11 +17,19 @@ export default function About({ summary }: AboutProps) {
       <div className={`container ${styles.about__wrap}`}>
         <div className={styles.about__card}>
           {summary.split('\n').map((p, i) => (
-            <p key={i} className={styles.about__text}>{p.trim()}</p>
+            <p key={i} className={styles.about__text}>
+              {p.trim()}
+            </p>
           ))}
         </div>
         <figure className={styles.about__media}>
-          <img className={styles.about__image} src={aboutImg} alt="About me" loading="lazy" decoding="async" />
+          <img
+            className={styles.about__image}
+            src={aboutImg}
+            alt="About me"
+            loading="lazy"
+            decoding="async"
+          />
         </figure>
       </div>
     </section>

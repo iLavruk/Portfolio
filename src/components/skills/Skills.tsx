@@ -21,15 +21,19 @@ export default function Skills({ groups }: SkillsProps) {
       <div className={`container ${styles.skills__wrap}`}>
         <div className={styles.skills__grid}>
           {featuredEntry ? (
-            <div className={`${styles.skills__panel} ${styles['skills__panel--featured']} card`} key={featuredTitle}>
-              <h3 className={styles.skills__groupTitle}>
-                {featuredTitle}
-              </h3>
+            <div
+              className={`${styles.skills__panel} ${styles['skills__panel--featured']} card`}
+              key={featuredTitle}
+            >
+              <h3 className={styles.skills__groupTitle}>{featuredTitle}</h3>
               <ul className={styles.skills__chips}>
                 {featuredList?.map((item) => {
                   const Icon = skillIcons[item]
                   return (
-                    <li className={`${styles.skills__chip} ${styles['skills__chip--featured']}`} key={item}>
+                    <li
+                      className={`${styles.skills__chip} ${styles['skills__chip--featured']}`}
+                      key={item}
+                    >
                       {Icon ? <Icon className={styles.skills__icon} aria-hidden="true" /> : null}
                       <span className={styles.skills__chipLabel}>{item}</span>
                     </li>

@@ -21,4 +21,3 @@ export function validateContactForm(fd: FormData): ContactErrors {
 
   return next
 }
-

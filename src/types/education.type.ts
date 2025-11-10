@@ -3,4 +3,3 @@ export type EducationItem = {
   place: string
   period: string
 }
-

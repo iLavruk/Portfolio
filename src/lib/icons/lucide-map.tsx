@@ -37,7 +37,10 @@ import {
 import { LinkedInIcon, GitHubIcon } from './brand-icons'
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>
-export const contactIcons: Record<'email'|'phone'|'linkedin'|'github'|'location', IconComponent> = {
+export const contactIcons: Record<
+  'email' | 'phone' | 'linkedin' | 'github' | 'location',
+  IconComponent
+> = {
   email: Mail,
   phone: Phone,
   linkedin: LinkedInIcon,
@@ -47,40 +50,40 @@ export const contactIcons: Record<'email'|'phone'|'linkedin'|'github'|'location'
 
 export const skillIcons: Record<string, LucideIcon> = {
   // Frontend
-  'JavaScript': Code2,
-  'TypeScript': FileCode,
-  'React': Atom,
+  JavaScript: Code2,
+  TypeScript: FileCode,
+  React: Atom,
   'Redux Toolkit': Boxes,
-  'HTML5': LayoutTemplate,
-  'CSS3': Palette,
-  'SCSS': Braces,
-  'Bootstrap': Boxes,
-  'WordPress': Globe,
+  HTML5: LayoutTemplate,
+  CSS3: Palette,
+  SCSS: Braces,
+  Bootstrap: Boxes,
+  WordPress: Globe,
 
   // Testing
   'Cypress (Automation)': Beaker,
 
   // Design
   'UI/UX': LayoutDashboard,
-  'Figma': PenTool,
+  Figma: PenTool,
   'Adobe Photoshop': ImageIcon,
-  'Illustrator': PenTool,
+  Illustrator: PenTool,
 
   // Other
   'Responsive Design': MonitorSmartphone,
   'Cross-browser': Globe,
-  'Git': GitBranch,
+  Git: GitBranch,
   'GitHub Actions': GitPullRequest,
   'Video Editing': Clapperboard,
 }
 
 export const interestIcons: Record<string, LucideIcon> = {
-  'Travel': Map,
-  'Music': Music,
-  'Coding': Code2,
-  'Sport': Dumbbell,
-  'Photography': Camera,
-  'Chess': Crown,
+  Travel: Map,
+  Music: Music,
+  Coding: Code2,
+  Sport: Dumbbell,
+  Photography: Camera,
+  Chess: Crown,
 }
 
 export const miscIcons = { Download, ChevronRight, Calendar }

@@ -55,7 +55,7 @@ export default function ContactForm() {
       })
       if (!res.ok) throw new Error('Request failed')
       setStatus('success')
-      setToast('Thanks! I\'ll get back to you soon.')
+      setToast("Thanks! I'll get back to you soon.")
       form.reset()
     } catch {
       setStatus('error')
@@ -68,11 +68,19 @@ export default function ContactForm() {
       {/* Hidden fields */}
       <input type="hidden" name="_subject" value="New message from portfolio" />
       {/* Honeypot */}
-      <input className={styles.form__hp} type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+      <input
+        className={styles.form__hp}
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
 
-      {formFields.map(field => {
+      {formFields.map((field) => {
         const nameMod = (styles as Record<string, string>)[`form__field--${field.name}`]
-        const fieldClass = `${styles.form__field} ${field.fullWidth ? styles['form__field--full'] : ''} ${nameMod ?? ''}`.trim()
+        const fieldClass =
+          `${styles.form__field} ${field.fullWidth ? styles['form__field--full'] : ''} ${nameMod ?? ''}`.trim()
         const err = errors[field.name as FieldName]
         if ('isTextarea' in field && field.isTextarea) {
           return (
@@ -109,9 +117,13 @@ export default function ContactForm() {
         {!endpoint ? (
           <span className={styles.form__note}>Form not configured yet.</span>
         ) : status === 'success' ? (
-          <span className="badge" role="status" aria-live="polite">{toast}</span>
+          <span className="badge" role="status" aria-live="polite">
+            {toast}
+          </span>
         ) : status === 'error' ? (
-          <span className={styles.form__note} role="alert" aria-live="assertive">{toast}</span>
+          <span className={styles.form__note} role="alert" aria-live="assertive">
+            {toast}
+          </span>
         ) : null}
       </div>
     </Form>
