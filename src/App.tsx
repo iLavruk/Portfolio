@@ -10,12 +10,14 @@ import Interests from '@components/interests/Interests'
 import Languages from '@components/languages/Languages'
 import Contact from '@components/contact/Contact'
 import Footer from '@components/footer/Footer'
+import Background from '@components/background/Background'
 
 const data = resume as unknown as ResumeData
 
 export default function App() {
   return (
     <>
+      <Background />
       <Header />
       <main id="main">
         <Hero

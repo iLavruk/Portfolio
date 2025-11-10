@@ -1,6 +1,4 @@
-/* BEM: contact */
-
-.contact__head {
+﻿.contact__head {
   text-align: center;
   margin: 0 auto;
   max-width: 760px;
@@ -11,7 +9,11 @@
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: var(--space-8);
-  align-items: start;
+  align-items: stretch; 
+}
+
+.contact__wrap > div {
+  height: 100%;
 }
 
 .contact__list {
@@ -25,16 +27,12 @@
   gap: var(--space-3);
   align-items: center;
   padding: var(--space-4);
+  min-width: 0; 
 }
 
 .contact__avatar {
   width: 44px;
   height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-sm);
-  background: var(--color-surface);
-  color: var(--color-text);
 }
 
 .contact__icon {
@@ -45,6 +43,7 @@
 .contact__body {
   display: grid;
   gap: var(--space-1);
+  min-width: 0; 
 }
 
 .contact__label {
@@ -54,13 +53,19 @@
 
 .contact__value a {
   color: var(--color-text);
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere; 
+  word-break: break-word;
+  white-space: normal;
 }
 
 .contact__formCard {
   padding: var(--space-6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
-/* title is shared via .section-title */
 
 .contact__subtitle {
   margin-top: var(--space-3);
@@ -74,4 +79,64 @@
   }
 }
 
-/* removed empty media block */
+@media (max-width: 480px) {
+  .contact__head {
+    max-width: 100%;
+    padding-inline: var(--space-2);
+  }
+
+  .contact__subtitle {
+    font-size: var(--fs-base);
+    margin-top: var(--space-2);
+  }
+
+  .contact__wrap {
+    gap: var(--space-6);
+  }
+
+  .contact__wrap > div {
+    height: auto;
+  }
+
+  .contact__list {
+    gap: var(--space-3);
+  }
+
+  .contact__card {
+    padding: var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .contact__avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact__icon {
+    width: var(--icon-sm);
+    height: var(--icon-sm);
+  }
+
+  .contact__formCard {
+    padding: var(--space-4);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .contact__wrap {
+    gap: var(--space-4);
+  }
+  .contact__card {
+    padding: var(--space-2);
+    gap: var(--space-2);
+  }
+  .contact__avatar {
+    width: 36px;
+    height: 36px;
+  }
+  .contact__formCard {
+    padding: var(--space-3);
+  }
+}
+

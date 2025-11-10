@@ -1,6 +1,4 @@
-/* BEM: experience */
-
-/* title is shared via .section-title */
+﻿
 
 .experience__wrap {
     padding: 0;
@@ -21,7 +19,7 @@
     align-items: end;
 }
 
-/* hover, border, bg handled by global .card */
+
 
 .experience__body {
     display: grid;
@@ -44,7 +42,6 @@
     margin: 0;
     font-size: var(--fs-xl);
     line-height: 1;
-    /* tighter line box to center tag */
 }
 
 .experience__meta {
@@ -57,10 +54,9 @@
     width: var(--icon-sm);
     height: var(--icon-sm);
     display: block;
-    /* avoid baseline gaps for vertical centering */
 }
 
-/* badge styles are global in index.css */
+
 
 .experience__tag {
     font-size: var(--fs-sm);
@@ -116,7 +112,7 @@
     justify-self: end;
 }
 
-/* Ensure icon size tracks text size inside small pills */
+
 .badge .experience__icon {
     width: 1em;
     height: 1em;
@@ -127,7 +123,7 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        /* don't let inner pills define width */
+        
         gap: var(--space-2);
     }
 
@@ -136,7 +132,6 @@
         width: 100%;
     }
 
-    /* On mobile, show period under the company within flow */
     .experience__period {
         position: static;
         margin-top: var(--space-1);
@@ -148,9 +143,7 @@
 
     .experience__badge {
         order: 0;
-        /* above the header */
         align-self: start;
-        /* move to the left */
         justify-self: start;
         width: auto;
         max-width: max-content;
@@ -158,6 +151,13 @@
     }
 }
 
-/* removed empty media block */
+
+@media (max-width: 480px) {
+    .experience__card {
+        padding: var(--space-4);
+        row-gap: var(--space-2);
+    }
+}
+
 
 

@@ -1,0 +1,37 @@
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 16px;
+  filter: blur(24px);
+  opacity: 0.18;
+  background: color-mix(in oklab, var(--color-primary) 22%, transparent);
+}
+
+.blob1 { width: 520px; height: 260px; top: -8%; left: -6%; transform: rotate(8deg); }
+.blob2 { width: 420px; height: 220px; top: 14%; right: -10%; transform: rotate(-12deg); }
+.blob3 { width: 560px; height: 260px; bottom: -8%; right: -6%; transform: rotate(6deg); opacity: 0.14; }
+
+
+
+@media (max-width: 1024px) {
+  .blob1 { width: 380px; height: 240px; }
+  .blob2 { width: 320px; height: 210px; }
+  .blob3 { width: 400px; height: 240px; }
+}
+
+@media (max-width: 480px) {
+  .blob1 { width: 260px; height: 180px; top: -10%; left: -20%; }
+  .blob2 { display: none; }
+  .blob3 { width: 280px; height: 180px; bottom: -12%; right: -20%; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .blob { opacity: 0.22; }
+}

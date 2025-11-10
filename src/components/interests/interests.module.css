@@ -1,6 +1,4 @@
-/* BEM: interests */
-
-/* title is shared via .section-title */
+﻿
 
 .interests__wrap {
     padding: 0;
@@ -27,13 +25,6 @@
 .interests__avatar {
     width: 48px;
     height: 48px;
-    display: grid;
-    place-items: center;
-    border-radius: var(--radius-sm);
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .interests__icon {
@@ -47,7 +38,7 @@
     font-weight: var(--fw-semibold);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .interests__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--space-3);
@@ -72,15 +63,13 @@
     }
 }
 
-/* Tablet: 2 columns */
-@media (max-width: 1024px) and (min-width: 601px) {
+@media (max-width: 1024px) {
     .interests__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Desktop enhancements */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .interests__avatar {
         width: 56px;
         height: 56px;
@@ -97,8 +86,7 @@
     border-color: color-mix(in oklab, var(--color-border) 60%, var(--color-primary));
 }
 
-/* Very small phones */
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .interests__grid {
         gap: var(--space-2);
     }
@@ -118,10 +106,10 @@
     }
 }
 
-/* Desktop: slightly larger icons */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .interests__icon {
         width: 1.5rem;
         height: 1.5rem;
     }
 }
+

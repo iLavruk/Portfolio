@@ -21,7 +21,7 @@ export default function Skills({ groups }: SkillsProps) {
       <div className={`container ${styles.skills__wrap}`}>
         <div className={styles.skills__grid}>
           {featuredEntry ? (
-            <div className={`${styles.skills__panel} ${styles['skills__panel--featured']}`} key={featuredTitle}>
+            <div className={`${styles.skills__panel} ${styles['skills__panel--featured']} card`} key={featuredTitle}>
               <h3 className={styles.skills__groupTitle}>
                 {featuredTitle}
               </h3>
@@ -39,7 +39,7 @@ export default function Skills({ groups }: SkillsProps) {
             </div>
           ) : null}
           {rest.map(([group, list]) => (
-            <div className={styles.skills__panel} key={group}>
+            <div className={`${styles.skills__panel} card`} key={group}>
               <h3 className={styles.skills__groupTitle}>{group}</h3>
               <ul className={styles.skills__chips}>
                 {list.map((item) => {

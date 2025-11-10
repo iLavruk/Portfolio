@@ -1,11 +1,11 @@
-/* BEM: about */
+
 
 .about__head {
   text-align: center;
   margin: 0 auto var(--space-8);
 }
 
-/* title is shared via .section-title */
+
 
 .about__wrap {
   padding: 0;
@@ -16,7 +16,7 @@
 }
 
 .about__card {
-  /* keep spacing, remove visual card background */
+  
   padding: 0;
   display: grid;
   gap: var(--space-4);

@@ -1,4 +1,4 @@
-/* BEM: nav */
+﻿
 
 .nav__list {
   display: flex;
@@ -26,7 +26,7 @@
   display: none;
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
   .nav {
     position: relative;
@@ -59,3 +59,4 @@
     display: flex;
   }
 }
+

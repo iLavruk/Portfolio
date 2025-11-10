@@ -37,7 +37,7 @@ export default function Contact({ contacts }: ContactProps) {
             <ContactCard
               icon={contactIcons.linkedin}
               label="LinkedIn"
-              value={contacts.linkedin}
+              value="Ivan Lavruk"
               href={contacts.linkedin}
               external
             />

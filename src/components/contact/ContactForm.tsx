@@ -9,7 +9,8 @@ export default function ContactForm() {
   return (
     <Form className={styles.form} onSubmit={(e) => e.preventDefault()}>
       {formFields.map(field => {
-        const fieldClass = `${styles.form__field} ${field.fullWidth ? styles['form__field--full'] : ''}`.trim()
+        const nameMod = (styles as Record<string, string>)[`form__field--${field.name}`]
+        const fieldClass = `${styles.form__field} ${field.fullWidth ? styles['form__field--full'] : ''} ${nameMod ?? ''}`.trim()
         if ('isTextarea' in field && field.isTextarea) {
           return (
             <Textarea

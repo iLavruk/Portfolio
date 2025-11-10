@@ -1,4 +1,4 @@
-/* BEM: input */
+
 .field {
     display: grid;
     gap: var(--space-1);
@@ -21,7 +21,7 @@
 
 .field__control:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 30%, transparent);
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-primary) 30%, transparent);
     border-color: var(--color-primary);
 }
 

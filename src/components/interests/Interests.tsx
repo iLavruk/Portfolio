@@ -19,7 +19,7 @@ export default function Interests({ items }: InterestsProps) {
             const Icon = interestIcons[i]
             return (
               <li className={`${styles.interests__card} card`} key={i}>
-                <div className={styles.interests__avatar}>
+                <div className={`avatar avatar--elevated ${styles.interests__avatar}`}>
                   {Icon ? <Icon className={styles.interests__icon} aria-hidden="true" /> : null}
                 </div>
                 <span className={styles.interests__name}>{i}</span>

@@ -20,7 +20,7 @@ export default function ContactCard({ icon: Icon, label, value, href, external }
 
   return (
     <li className={`${styles.contact__card} card`}>
-      <div className={styles.contact__avatar}>{Icon ? <Icon className={styles.contact__icon} aria-hidden="true" /> : null}</div>
+      <div className={`avatar ${styles.contact__avatar}`}>{Icon ? <Icon className={styles.contact__icon} aria-hidden="true" /> : null}</div>
       <div className={styles.contact__body}>
         <div className={styles.contact__label}>{label}</div>
         <div className={styles.contact__value}>{content}</div>

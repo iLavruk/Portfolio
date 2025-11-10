@@ -9,7 +9,12 @@ export default function Hero({ name, title, tagline, available, contacts, cvUrl 
     <section id={SectionId.home} className={styles.hero}>
       <div className={`container ${styles.hero__inner}`}>
         <div className={styles.hero__content}>
-          {available && <div className={styles.hero__badge}>Available for work</div>}
+          {available && (
+            <div className={styles.hero__badge}>
+              Available for work
+              <span className={styles.hero__dot} aria-hidden="true" />
+            </div>
+          )}
           {(() => {
             const [first, ...rest] = name.split(' ')
             const last = rest.join(' ')

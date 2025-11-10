@@ -1,10 +1,8 @@
-/* BEM: skills */
+﻿
 
 .skills__wrap {
   padding: 0;
 }
-
-/* title is shared via .section-title */
 
 .skills__grid {
   display: grid;
@@ -14,18 +12,10 @@
 
 .skills__panel {
   padding: var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  background: var(--color-surface);
-  box-shadow: var(--shadow-sm);
-  /* Додано transition у базовий стан для плавного ефекту наведення та відведення */
-  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
-.skills__panel:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
-}
+
+
 
 .skills__panel--featured {
   grid-column: 1 / -1;
@@ -72,14 +62,10 @@
   width: var(--icon-sm);
   height: var(--icon-sm);
 }
-
-/* Center chips and add subtle hover for the featured panel */
 .skills__panel--featured .skills__chips {
   justify-content: center;
   gap: var(--space-6);
 }
-
-/* Featured chips: vertical layout with bigger icons and centered labels */
 .skills__chip--featured {
   flex-direction: column;
   align-items: center;
@@ -119,3 +105,14 @@
     padding: var(--space-4) var(--space-4);
   }
 }
+
+@media (max-width: 480px) {
+  .skills__panel--featured .skills__chip--featured {
+    padding: var(--space-3) var(--space-3);
+  }
+  .skills__chipLabel {
+    font-size: var(--fs-base);
+  }
+}
+
+

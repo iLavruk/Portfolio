@@ -1,10 +1,7 @@
-/* BEM: education */
-
-.education__wrap {
+﻿.education__wrap {
     padding: 0;
 }
 
-/* title is shared via .section-title */
 
 .education__grid {
     display: grid;
@@ -44,7 +41,7 @@
 .education__period {
     justify-self: end;
     align-self: end;
-    /* badge visuals are handled by global .badge */
+    
 }
 
 .education__icon {
@@ -53,14 +50,6 @@
 }
 
 @media (max-width: 768px) {
-    .education__wrap {
-        padding-block: var(--space-8);
-    }
-
-    .education__title {
-        margin-bottom: var(--space-5);
-    }
-
     .education__grid {
         grid-template-columns: 1fr;
     }
@@ -93,4 +82,11 @@
     }
 }
 
-/* removed empty media block */
+
+@media (max-width: 480px) {
+    .education__card {
+        padding: var(--space-3);
+        gap: var(--space-2);
+    }
+}
+
