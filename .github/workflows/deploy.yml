@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VITE_FORMSPREE_ID: ${{ vars.VITE_FORMSPREE_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,4 +50,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
