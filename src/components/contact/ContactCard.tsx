@@ -11,7 +11,7 @@ type ContactCardProps = {
 
 export default function ContactCard({ icon: Icon, label, value, href, external }: ContactCardProps) {
   const content = href ? (
-    <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer noopener' : undefined}>
+    <a className={styles.contact__link} href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer noopener' : undefined}>
       {value}
     </a>
   ) : (

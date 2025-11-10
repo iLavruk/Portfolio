@@ -34,3 +34,5 @@
     color: var(--color-error);
     font-size: var(--fs-sm);
 }
+
+/* feedback block removed to allow natural layout */

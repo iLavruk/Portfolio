@@ -40,7 +40,7 @@ export default function Hero({ name, title, tagline, available, contacts, cvUrl 
             </a>
           </div>
           <div className={styles.hero__links}>
-            <a href={contacts.linkedin} target="_blank" rel="noreferrer">
+            <a className={styles.hero__link} href={contacts.linkedin} target="_blank" rel="noreferrer">
               {contactIcons.linkedin ? <contactIcons.linkedin className={styles.hero__icon} aria-hidden="true" /> : null}
               LinkedIn
             </a>
@@ -48,7 +48,7 @@ export default function Hero({ name, title, tagline, available, contacts, cvUrl 
               <>
                 {' '}
                 |{' '}
-                <a href={contacts.github} target="_blank" rel="noreferrer">
+                <a className={styles.hero__link} href={contacts.github} target="_blank" rel="noreferrer">
                   {contactIcons.github ? <contactIcons.github className={styles.hero__icon} aria-hidden="true" /> : null}
                   GitHub
                 </a>
@@ -56,7 +56,7 @@ export default function Hero({ name, title, tagline, available, contacts, cvUrl 
             )}
             <>
               {' '}
-              | <a href={`mailto:${contacts.email}`}>
+              | <a className={styles.hero__link} href={`mailto:${contacts.email}`}>
                 {contactIcons.email ? <contactIcons.email className={styles.hero__icon} aria-hidden="true" /> : null}
                 Email
               </a>

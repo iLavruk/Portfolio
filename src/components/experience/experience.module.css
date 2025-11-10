@@ -83,11 +83,11 @@
     padding-left: 0;
 }
 
-.experience__list li {
+.experience__item {
     margin: var(--space-4) 0;
 }
 
-.experience__list li:last-child {
+.experience__item:last-child {
     margin-bottom: 0;
 }
 

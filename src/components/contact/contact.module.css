@@ -51,7 +51,7 @@
   color: var(--color-muted);
 }
 
-.contact__value a {
+.contact__link {
   color: var(--color-text);
   display: inline-block;
   max-width: 100%;

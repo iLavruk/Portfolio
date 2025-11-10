@@ -132,16 +132,13 @@
   color: var(--color-muted);
 }
 
-.hero__links a {
+.hero__link {
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
 }
 
-.hero__media img {
-  width: 100%;
-  border-radius: var(--radius);
-}
+
 
 @media (max-width: 768px) {
   .hero__inner {
