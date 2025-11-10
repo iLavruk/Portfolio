@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 128 128" role="img" aria-label="IL monogram">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="24" fill="url(#g)"/>
+  <g fill="#fff">
+    <!-- I -->
+    <rect x="28" y="28" width="16" height="72" rx="8"/>
+    <!-- L -->
+    <rect x="56" y="28" width="16" height="72" rx="8"/>
+    <rect x="56" y="84" width="44" height="16" rx="8"/>
+  </g>
+</svg>
+
