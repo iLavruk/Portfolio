@@ -3,7 +3,6 @@ import type { ComponentType, SVGProps } from 'react'
 import {
   Atom,
   Beaker,
-  Book,
   Boxes,
   Camera,
   ChevronRight,
