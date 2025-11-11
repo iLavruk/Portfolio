@@ -1,75 +1,90 @@
-# React + TypeScript + Vite
+# Ivan Lavruk — Portfolio (React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live: https://ilavruk.github.io/portfolio/
 
-Currently, two official plugins are available:
+Personal portfolio site built with React 19, TypeScript, and Vite. It renders content from a single JSON file, uses CSS Modules with design tokens, and includes SEO, Open Graph, and structured data for discoverability.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Preview](public/og-image.webp)
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Sections: Hero, About, Work Experience, Skills, Education, Languages, Interests, Contact
+- Content-driven: edit `src/data/resumeData.json` and the CV file in `public/cv/`
+- Contact form with client-side validation and optional Formspree integration
+- SEO: `<meta>` tags, Open Graph image, `public/sitemap.xml`, `public/robots.txt`
+- Structured data: Schema.org Person in `index.html`
+- Styling: CSS Modules + `src/styles/tokens.css` design tokens
+- Icons: `@tabler/icons-react` and `lucide-react`
+- Modern stack: React 19 with the React Compiler, Vite 7, TypeScript strict mode
 
-Note: This will impact Vite dev & build performances.
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19, TypeScript 5, Vite 7
+- ESLint + Prettier (already configured)
+- CSS Modules
+- Vite TS paths via `vite-tsconfig-paths`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Prerequisites: Node.js 20+ is recommended.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+npm install
+npm run dev     # start locally
+npm run build   # build for production (outputs to dist/)
+npm run preview # preview the production build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+npm run lint        # check lint
+npm run lint:fix    # fix lint issues
+npm run format      # format with Prettier
+npm run format:check
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Configuration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Environment variables:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `VITE_FORMSPREE_ID` (optional) — enable sending messages from the contact form via Formspree. Without it, the form shows a note and does not submit.
+
+Paths and deployment:
+
+- Vite `base` is set in `vite.config.ts`. For GitHub Pages under `https://<user>.github.io/<repo>/`, set it to `/<repo>/`.
+- This repo is named `Portfolio`, so the value should be `'/Portfolio/'` to match the URL path exactly (paths on GitHub Pages are case-sensitive). Update if you rename the repo.
+
+## Content Editing
+
+- `src/data/resumeData.json` — main content: name, tagline, contacts, skills, experience, education, languages, interests, summary, `cvUrl`.
+- `public/cv/CV_Ivan_Lavruk_en.pdf` — downloadable CV file referenced by `cvUrl`.
+- Images live in `public/` (for public URLs) or `src/assets/` (bundled). The Open Graph image is `public/og-image.webp`.
+
+## Project Structure
+
 ```
+src/
+  components/
+    about/, background/, contact/, education/, experience/,
+    footer/, header/, hero/, interests/, languages/, nav/, skills/, ui/
+  data/              # resumeData.json (content)
+  lib/
+    constants/       # navigation, sections, contact form fields
+    hooks/           # useActiveSection
+    icons/           # icon wrappers
+    validation/      # contact form validation
+  styles/            # tokens.css and globals
+  types/             # shared TypeScript types
+```
+
+## SEO
+
+- `index.html` sets title, description, canonical URL, Open Graph tags, and Schema.org Person.
+- `public/sitemap.xml` and `public/robots.txt` are included. Update URLs if the deployment path changes.
+
+## Notes
+
+- React Compiler is enabled through Babel (`babel-plugin-react-compiler`). See https://react.dev/learn/react-compiler.
+- ESLint is configured with `typescript-eslint` and Prettier. You can enable type-aware linting later if desired.
+- If you notice strange characters in `resumeData.json` (e.g., replacement symbols), replace smart quotes/en-dashes with ASCII equivalents.
+
+## License
+
+No explicit license specified. All rights reserved by the author unless stated otherwise.
