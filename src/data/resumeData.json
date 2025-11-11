@@ -89,7 +89,32 @@
       "level": "B1"
     }
   ],
-  "interests": ["Travel", "Music", "Coding", "Sport", "Photography", "Chess"],
+  "interests": [
+    {
+      "name": "Coding",
+      "description": "I enjoy experimenting with new technologies and creating side projects."
+    },
+    {
+      "name": "Music",
+      "description": "Music inspires me during development and helps me stay focused."
+    },
+    {
+      "name": "Travel",
+      "description": "Traveling broadens my worldview and sparks new ideas."
+    },
+    {
+      "name": "Sport",
+      "description": "Regular training helps maintain both physical and mental fitness."
+    },
+    {
+      "name": "Photography",
+      "description": "Photography teaches me to notice details and work with composition."
+    },
+    {
+      "name": "Chess",
+      "description": "Chess develops strategic thinking and the ability to plan ahead."
+    }
+  ],
   "summary": "I\u0027m Ivan Lavruk, a Frontend Developer passionate about creating modern, intuitive, and high-performance web applications.\nI specialize in the React ecosystem and enjoy transforming complex ideas into clean and engaging user experiences.\nBeyond coding, I\u0027m inspired by design, technology, and continuous learning - always seeking new ways to grow and innovate.",
   "available": true,
   "cvUrl": "cv/CV_Ivan_Lavruk_en.pdf"

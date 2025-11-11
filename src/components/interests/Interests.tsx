@@ -1,9 +1,10 @@
 import { SectionId } from '@lib/constants/sections.constant'
 import styles from './interests.module.css'
 import { interestIcons } from '@/lib/icons/lucide-map'
+import type { InterestItem } from '@types'
 
 type InterestsProps = {
-  items: string[]
+  items: InterestItem[]
 }
 
 export default function Interests({ items }: InterestsProps) {
@@ -16,13 +17,15 @@ export default function Interests({ items }: InterestsProps) {
       <div className={`container ${styles.interests__wrap}`}>
         <ul className={styles.interests__grid}>
           {items.map((i) => {
-            const Icon = interestIcons[i]
+            const name = i.name
+            const Icon = interestIcons[name]
             return (
-              <li className={`${styles.interests__card} card`} key={i}>
+              <li className={`${styles.interests__card} card`} key={name}>
                 <div className={`avatar avatar--elevated ${styles.interests__avatar}`}>
                   {Icon ? <Icon className={styles.interests__icon} aria-hidden="true" /> : null}
                 </div>
-                <span className={styles.interests__name}>{i}</span>
+                <span className={styles.interests__name}>{name}</span>
+                <p className={styles.interests__desc}>{i.description}</p>
               </li>
             )
           })}

@@ -1,4 +1,11 @@
-import type { Contacts, SkillGroups, ExperienceItem, EducationItem, LanguageItem } from './types'
+import type {
+  Contacts,
+  SkillGroups,
+  ExperienceItem,
+  EducationItem,
+  LanguageItem,
+  InterestItem,
+} from './types'
 
 export type ResumeData = {
   name: string
@@ -8,7 +15,7 @@ export type ResumeData = {
   experience: ExperienceItem[]
   education: EducationItem[]
   languages: LanguageItem[]
-  interests: string[]
+  interests: InterestItem[]
   summary: string
   tagline: string
   available: boolean
