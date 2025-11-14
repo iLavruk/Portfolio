@@ -66,7 +66,7 @@ export default function ContactForm() {
   return (
     <Form className={styles.form} onSubmit={onSubmit}>
       {/* Hidden fields */}
-      <input type="hidden" name="_subject" value="New message from portfolio" />
+      <input type="hidden" name="_subject" value="New message from cv" />
       {/* Honeypot */}
       <input
         className={styles.form__hp}

@@ -1,8 +1,8 @@
 # Ivan Lavruk — React + TypeScript + Vite
 
-Live: https://ilavruk.github.io/portfolio/
+Live: https://ilavruk.github.io/cv/
 
-Personal portfolio site built with React 19, TypeScript, and Vite. It renders content from a single JSON file, uses CSS Modules with design tokens, and includes SEO, Open Graph, and structured data for discoverability.
+Personal cv site built with React 19, TypeScript, and Vite. It renders content from a single JSON file, uses CSS Modules with design tokens, and includes SEO, Open Graph, and structured data for discoverability.
 
 ## Features
 
@@ -47,7 +47,7 @@ Environment variables:
 Paths and deployment:
 
 - Vite `base` is set in `vite.config.ts`. For GitHub Pages under `https://<user>.github.io/<repo>/`, set it to `/<repo>/`.
-- This repo is named `portfolio`, so the value should be `'/portfolio/'` to match the URL path exactly (paths on GitHub Pages are case-sensitive). Update if you rename the repo.
+- This repo is named `cv`, so the value should be `'/cv/'` to match the URL path exactly (paths on GitHub Pages are case-sensitive). Update if you rename the repo.
 
 ## Content Editing
 
